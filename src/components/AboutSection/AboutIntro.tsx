@@ -6,10 +6,9 @@ const AboutIntro = () => (
     </h3>
 
     <p className="text-muted-foreground">
-      I'm a web developer with a strong focus on back-end development, primarily using{" "}
+      I'm currently pursuing a  degree in <span className="text-primary">Systems Engineering</span>, which complements my work as a web developer with a strong focus on back-end development, primarily using{" "}
       <span className="text-primary">Java</span> and the{" "}
-      <span className="text-primary">Spring Boot</span> ecosystem.
-      I enjoy building scalable APIs, integrating authentication systems, and working on high-performance services.
+      <span className="text-primary">Spring Boot</span> ecosystem. I enjoy building scalable APIs, integrating authentication systems, and working on high-performance services.
     </p>
 
     <p className="text-muted-foreground">
