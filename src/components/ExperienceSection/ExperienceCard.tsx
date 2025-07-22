@@ -1,5 +1,6 @@
 import type { FC } from 'react';
 import { motion } from 'framer-motion';
+import useAnimatedInView from '@/hooks/useAnimatedInView';
 
 interface ExperienceCardProps {
   title: string;
@@ -18,12 +19,17 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
   endDate,
   description,
 }) => {
+  const { ref, controls } = useAnimatedInView({
+    delay: 0.2,
+    amount: 0.3,
+    once: false
+  });
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-      viewport={{ once: true, amount: 0.1 }}
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={controls}
       className="relative gradient-border rounded-xl p-2 sm:p-7 shadow-xl"
     >
       {/* Header */}

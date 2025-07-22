@@ -1,5 +1,6 @@
-import { type FC, useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { type FC } from "react";
+import { motion } from "framer-motion";
+import useAnimatedInView from "@/hooks/useAnimatedInView";
 
 export interface AboutCardProps {
   icon: React.ReactNode;
@@ -9,28 +10,11 @@ export interface AboutCardProps {
 }
 
 const AboutCard: FC<AboutCardProps> = ({ icon, title, description, delay }) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, {
+  const { ref, controls } = useAnimatedInView({
+    delay,
     amount: 0.3,
-    once: false,
+    once: false
   });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, delay },
-      });
-    } else {
-      controls.start({
-        opacity: 0,
-        y: 30,
-        transition: { duration: 0.4 },
-      });
-    }
-  }, [inView, controls, delay]);
 
   return (
     <motion.div
