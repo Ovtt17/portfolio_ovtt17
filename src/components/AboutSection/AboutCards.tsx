@@ -1,4 +1,4 @@
-import { aboutMeCards } from "../../constants/aboutMeCards";
+import { aboutMeCards } from "@/data/aboutMeCards";
 import AboutCard from "./AboutCard";
 
 const AboutCards = () => (
