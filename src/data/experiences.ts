@@ -3,16 +3,18 @@ import type { Experience } from "../types/Experience";
 export const experiences: Experience[] = [
   {
     id: 'job1',
-    title: 'Retail Store - Full-Stack Developer',
+    title: 'Freelance - Hey! Cha Inventory',
     position: 'Full-Stack Developer',
     url: '',
-    startDate: 'June 2024',
+    startDate: 'December 2024',
     endDate: 'present',
     description: [
-      'Developed and maintained an internal inventory management system for a retail store using Spring Boot (Java 17) and React with TypeScript.',
-      'Implemented product management, stock control, category filters, and user authentication with JWT.',
-      'Deployed backend services on AWS EC2, storing assets in S3, and used PostgreSQL with Hibernate for persistence.',
-      'Optimized UX/UI with responsive design using Tailwind CSS and improved business efficiency by automating manual inventory processes.',
+      'Developed Hey! Cha Inventory, a secure internal system for managing inventory, sales, and imported orders for a retail store.',
+      'Built backend APIs with Spring Boot (Java 17) and frontend with React, TypeScript, and Tailwind CSS.',
+      'Implemented authentication and authorization using JWT and OAuth 2.0, including Google login integration.',
+      'Implemented advanced product filtering by multiple criteria to improve search efficiency.',
+      'Deployed backend services on Railway with MySQL for data persistence and used AWS S3 for secure asset storage.',
+      'Provided ongoing maintenance and feature updates to meet evolving client needs, enhancing operational efficiency.',
     ],
-  }
+  },
 ];
