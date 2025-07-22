@@ -18,6 +18,7 @@
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
   --animate-meteor: meteor 5s linear infinite;
+  --animate-wave: wave 2s ease-in-out infinite;
 
   @keyframes float {
     0%,
@@ -60,22 +61,19 @@
       opacity: 0;
     }
   }
+
+  @keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    15% { transform: rotate(15deg); }
+    30% { transform: rotate(-10deg); }
+    45% { transform: rotate(15deg); }
+    60% { transform: rotate(-10deg); }
+    75% { transform: rotate(15deg); }
+  }
 }
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
-
-    --card: 0 0% 100%;
-
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%;
-  }
-
-  .dark {
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
 
@@ -98,6 +96,14 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .animate-wave {
+    animation: var(--animate-wave);
+    transform-origin: 70% 70%;
+    display: inline-block;
   }
 }
 
