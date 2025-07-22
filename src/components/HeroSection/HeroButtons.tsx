@@ -16,24 +16,26 @@ const HeroButtons = () => (
         Download CV
       </a>
 
-      <a
-        href="https://github.com/ovtt17"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="GitHub"
-        className="text-primary hover:text-primary-foreground transition-colors"
-      >
-        <GitHubIcon className="w-10 h-10" />
-      </a>
-      <a
-        href="https://linkedin.com/in/ovtt17"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="LinkedIn"
-        className="text-primary hover:text-primary-foreground transition-colors"
-      >
-        <LinkedInIcon className="w-10 h-10" />
-      </a>
+      <div className="flex gap-4">
+        <a
+          href="https://github.com/ovtt17"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          className="text-primary hover:text-primary-foreground transition-colors"
+        >
+          <GitHubIcon className="w-10 h-10" />
+        </a>
+        <a
+          href="https://linkedin.com/in/ovtt17"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          className="text-primary hover:text-primary-foreground transition-colors"
+        >
+          <LinkedInIcon className="w-10 h-10" />
+        </a>
+      </div>
     </div>
   </div>
 );
