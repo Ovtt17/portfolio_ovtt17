@@ -17,10 +17,9 @@ const GitHubStats = () => {
         <a
           className="cosmic-button w-fit flex items-center mx-auto gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           target="_blank"
-          href="https://github.com/ovtt17"
+          href="https://github.com/Ovtt17"
         >
-          Check My GitHub <GitHubIcon color="white" className="w-8 h-8" />
-        </a>
+          Explore More on GitHub <GitHubIcon color="currentColor" className="w-8 h-8 text-white" />        </a>
       </div>
     </>
   );
