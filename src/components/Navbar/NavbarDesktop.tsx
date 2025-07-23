@@ -13,7 +13,7 @@ const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, 
 
   return (
     <motion.div
-      className="hidden lg:flex flex-1 justify-center items-center gap-4"
+      className="relative hidden lg:flex flex-1 justify-center items-center gap-4"
       initial={{ y: -10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
