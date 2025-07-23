@@ -9,7 +9,7 @@ interface Props {
 
 const ProjectCard: FC<Props> = ({ project }) => (
   <div className="group gradient-border rounded-lg overflow-hidden shadow-xs">
-    <div className="h-48 overflow-hidden">
+    <div className="aspect-w-16 aspect-h-9 overflow-hidden">
       <img
         src={project.image}
         alt={project.title}
