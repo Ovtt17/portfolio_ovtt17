@@ -1,5 +1,5 @@
 import { ExpandIcon, ExternalLink, XIcon } from "lucide-react";
-import GitHubIcon from "../Icon/GitHubIcon";
+import GitHubIcon from "../../assets/Icon/GitHubIcon";
 import type { Project } from '../../types/Project';
 import type { FC } from "react";
 import { useState } from 'react';

@@ -1,5 +1,5 @@
 import GitHubCalendar from "react-github-calendar";
-import GitHubIcon from "../Icon/GitHubIcon";
+import GitHubIcon from "../../assets/Icon/GitHubIcon";
 
 const GitHubStats = () => {
   return (
