@@ -9,7 +9,7 @@ const GitHubStats = () => {
           <span className="text-primary opacity-0 animate-fade-in">GitHub</span>{" "}
           <span className="opacity-0 animate-fade-in-delay-1">Calendar</span>
         </h2>
-        <div className="w-full max-w-5xl">
+        <div className="w-full max-w-5xl flex justify-center items-center">
           <GitHubCalendar username="Ovtt17" />
         </div>
       </div>
