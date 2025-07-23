@@ -30,12 +30,12 @@ const ProjectCard: FC<Props> = ({ project }) => {
           </div>
           <div
             onClick={handleOpen}
-            className="aspect-w-16 aspect-h-9 overflow-hidden cursor-pointer"
+            className="relative w-full h-0 pb-[56.25%] overflow-hidden cursor-pointer"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
             {project.tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                className="px-2 py-1 text-xs font-medium border rounded-full bg-background-secondary text-foreground/80 transition-all duration-300 hover:bg-primary hover:text-white"
               >
                 {tag}
               </span>
@@ -58,7 +58,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
               <a
                 href={project.demoUrl}
                 target="_blank"
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                className="text-foreground hover:text-primary transition-colors duration-300"
               >
                 <ExternalLink className="w-10 h-10" />
               </a>
@@ -67,7 +67,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
               <a
                 href={project.codeUrl}
                 target="_blank"
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                className="text-foreground hover:text-primary transition-colors duration-300"
               >
                 <GitHubIcon className="w-10 h-10" />
               </a>
