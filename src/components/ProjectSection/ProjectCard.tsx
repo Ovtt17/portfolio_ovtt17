@@ -28,7 +28,10 @@ const ProjectCard: FC<Props> = ({ project }) => {
               <ExpandIcon />
             </button>
           </div>
-          <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+          <div
+            onClick={handleOpen}
+            className="aspect-w-16 aspect-h-9 overflow-hidden cursor-pointer"
+          >
             <img
               src={project.image}
               alt={project.title}
