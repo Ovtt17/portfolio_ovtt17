@@ -1,7 +1,7 @@
-import HomeIcon from "../components/Icon/HomeIcon";
-import UserCircleIcon from "../components/Icon/UserCircleIcon";
-import CodeIcon from "../components/Icon/CodeIcon";
-import RocketIcon from "../components/Icon/SendIcon";
+import HomeIcon from "../assets/Icon/HomeIcon";
+import UserCircleIcon from "../assets/Icon/UserCircleIcon";
+import CodeIcon from "../assets/Icon/CodeIcon";
+import RocketIcon from "../assets/Icon/SendIcon";
 
 export interface NavItem {
   name: string;

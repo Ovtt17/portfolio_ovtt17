@@ -1,5 +1,5 @@
 import GitHubCalendar from "react-github-calendar";
-import GitHubIcon from "../Icon/GitHubIcon";
+import GitHubIcon from "../../assets/Icon/GitHubIcon";
 
 const GitHubStats = () => {
   return (
@@ -9,11 +9,11 @@ const GitHubStats = () => {
           <span className="text-primary opacity-0 animate-fade-in">GitHub</span>{" "}
           <span className="opacity-0 animate-fade-in-delay-1">Calendar</span>
         </h2>
-        <div className="scale-90">
+        <div className="w-full max-w-5xl">
           <GitHubCalendar username="Ovtt17" />
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center mt-4">
         <a
           className="cosmic-button w-fit flex items-center mx-auto gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
           target="_blank"
