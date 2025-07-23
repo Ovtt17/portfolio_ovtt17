@@ -16,7 +16,7 @@ export const projects: Project[] = [
       "Full-stack WhatsApp Web clone with real-time chat using WebSockets, authentication via Keycloak, and a scalable Spring Boot backend.",
     image: "/projects/whatsapp-clone.png",
     tags: ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "Keycloak", "WebSocket", "Vite"],
-    codeUrl: "https://github.com/Ovtt17/whatsapp-clone-ui"
+    codeUrl: "https://github.com/Ovtt17/whatsapp-clone-api"
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ export const projects: Project[] = [
       "Full-stack survey management platform built with Spring Boot and React. Includes OAuth2.0 authentication with Google and Facebook, email notifications, image uploads via Imgur API, and modular services such as reviews, reports, and user profiles. Features a clean REST API and a dynamic architecture suitable for real-world use.",
     image: "/projects/survey-app.png",
     tags: ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "OAuth2.0", "JWT", "MySQL", "Imgur API", "REST API"],
-    codeUrl: "https://github.com/Ovtt17/survey-app-ui"
+    codeUrl: "https://github.com/Ovtt17/survey-app-api"
   },
   {
     id: 4,
