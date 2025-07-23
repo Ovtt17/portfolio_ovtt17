@@ -43,7 +43,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
         <div className="px-6 py-4">
           <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
-          <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
             {project.tags.map((tag, index) => (
               <span
                 key={index}

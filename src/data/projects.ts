@@ -15,7 +15,7 @@ export const projects: Project[] = [
     description:
       "Full-stack WhatsApp Web clone with real-time chat using WebSockets, authentication via Keycloak, and a scalable Spring Boot backend.",
     image: "/projects/whatsapp-clone.webp",
-    tags: ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "Keycloak", "WebSocket", "Vite"],
+    tags: ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "Keycloak", "WebSocket", "Vite", "Docker Compose"],
     codeUrl: "https://github.com/Ovtt17/whatsapp-clone-api"
   },
   {
