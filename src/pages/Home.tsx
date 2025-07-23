@@ -1,8 +1,9 @@
-import AboutSection from "../components/AboutSection";
-import HeroSection from "../components/HeroSection";
-import ExperienceSection from "../components/ExperienceSection";
+import AboutSection from "@/components/AboutSection";
+import HeroSection from "@/components/HeroSection";
+import ExperienceSection from "@/components/ExperienceSection";
 import Navbar from "../components/Navbar";
 import ProjectSection from "@/components/ProjectSection";
+import TechnologiesSection from "@/components/TechnologiesSection";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <AboutSection />
         <ExperienceSection />
         <ProjectSection />
+        <TechnologiesSection />
       </main>
 
       {/* Footer */}
