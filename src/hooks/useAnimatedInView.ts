@@ -17,13 +17,13 @@ const useAnimatedInView = ({ delay = 0, amount = 0.3, once = false }: UseAnimate
       controls.start({
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6, delay },
+        transition: { duration: 0.6, delay, ease: "easeOut" },
       });
     } else {
       controls.start({
         opacity: 0,
-        y: 30,
-        transition: { duration: 0.4 },
+        y: 20,
+        transition: { duration: 0.4, ease: "easeIn" },
       });
     }
   }, [inView, controls, delay]);
