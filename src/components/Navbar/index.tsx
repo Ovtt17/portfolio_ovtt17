@@ -1,37 +1,13 @@
-import { useState, useEffect } from "react";
-import { navItems } from "../../constants/navItems";
+import { useState } from "react";
+import { useSectionContext } from "../../context/SectionContext";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import NavbarToggle from "./NavbarToggle";
 
 const Navbar = () => {
+  const { activeIndex } = useSectionContext();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map(item => {
-        const id = item.href.replace('#', '');
-        return document.getElementById(id);
-      });
-      const scrollY = window.scrollY + window.innerHeight / 3;
-      let current = null;
-      sections.forEach((section, idx) => {
-        if (section) {
-          const top = section.offsetTop;
-          const bottom = top + section.offsetHeight;
-          if (scrollY >= top && scrollY < bottom) {
-            current = idx;
-          }
-        }
-      });
-      setActiveIndex(current);
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <nav className="fixed top-4 left-0 z-40 w-full px-2">
@@ -65,7 +41,6 @@ const Navbar = () => {
         activeIndex={activeIndex}
       />
     </nav>
-
   );
 };
 

@@ -35,7 +35,7 @@ const HeroSection = () => {
         <HeroDescription />
         <HeroButtons />
       </motion.div>
-      <ScrollIndicator />
+      <ScrollIndicator nextSectionName="about" />
     </motion.section>
   );
 };
