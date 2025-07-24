@@ -1,18 +1,28 @@
 import type { FC } from 'react';
+import { motion } from 'framer-motion';
 import ExperienceTimeline from './ExperienceTimeline';
 import ExperienceHeader from './ExperienceHeader';
+import ScrollIndicator from '../ScrollIndicator';
+import useScrollEffects from '../../hooks/useScrollEffects';
 
 const ExperienceSection: FC = () => {
+  const { sectionRef, opacity, y } = useScrollEffects();
+
   return (
-    <section
+    <motion.section
       id="experience"
-      className="bg-background-secondary min-h-screen py-24 px-1 relative"
+      ref={sectionRef}
+      className="bg-background-secondary min-h-screen pt-24 pb-25 px-1 relative"
     >
-      <div className="container max-w-5xl">
+      <motion.div
+        style={{ opacity, y }}
+        className="container max-w-5xl"
+      >
         <ExperienceHeader />
         <ExperienceTimeline />
-      </div>
-    </section>
+      </motion.div>
+      <ScrollIndicator nextSectionName="projects" />
+    </motion.section>
   );
 };
 
