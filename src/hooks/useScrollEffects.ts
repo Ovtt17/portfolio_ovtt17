@@ -13,12 +13,12 @@ const useScrollEffects = () => {
 
   const opacity = useTransform(
     scrollYProgress,
-    isSmallScreen ? [0.5, 1] : [0, 0.5],
+    isSmallScreen ? [0.5, 1] : [0, 0.7],
     [1, 0]
   );
   const y = useTransform(
     scrollYProgress,
-    isSmallScreen ? [0.5, 1] : [0, 0.5],
+    isSmallScreen ? [0.5, 1] : [0, 0.7],
     [0, -50]
   );
 
