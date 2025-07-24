@@ -4,6 +4,7 @@ import ExperienceSection from "@/components/ExperienceSection";
 import Navbar from "../components/Navbar";
 import ProjectSection from "@/components/ProjectSection";
 import TechnologiesSection from "@/components/TechnologiesSection";
+import ContactSection from "@/components/ContactSection";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <ExperienceSection />
         <ProjectSection />
         <TechnologiesSection />
+        <ContactSection />
       </main>
 
       {/* Footer */}
