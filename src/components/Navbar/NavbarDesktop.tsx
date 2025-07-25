@@ -27,7 +27,6 @@ const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, 
               href={item.href}
               className={cn(
                 "flex items-center gap-2 px-3 py-1.5 rounded-full transition duration-300 text-foreground text-base font-medium",
-                isActive ? "text-primary" : "",
                 isDimmed ? "opacity-40" : "opacity-100"
               )}
               onMouseEnter={() => setHoveredIndex(index)}

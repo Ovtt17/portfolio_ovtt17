@@ -26,7 +26,7 @@ const AboutCard: FC<AboutCardProps> = ({ icon, title, description, delay }) => {
       <div className="flex items-start gap-4">
         <div className="p-3 rounded-full bg-primary/10">{icon}</div>
         <div className="text-left">
-          <h4 className="text-primary font-semibold text-lg">{title}</h4>
+          <h4 className="gradient-text font-semibold text-lg">{title}</h4>
           <p className="text-muted-foreground">{description}</p>
         </div>
       </div>
