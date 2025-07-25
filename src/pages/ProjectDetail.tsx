@@ -4,6 +4,7 @@ import type { Project } from "@/types/Project";
 import Navbar from "@/components/Navbar";
 import { projects } from "@/data/projects";
 import { useParams } from "react-router-dom";
+import NotFound from "./NotFound";
 
 const ProjectDetail: FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -12,7 +13,7 @@ const ProjectDetail: FC = () => {
   document.title = project ? `${project.title} - Ovett Mora` : "Project Not Found";
 
   if (!project) {
-    return <div>Project not found</div>;
+    return <NotFound />;
   }
 
   const {
