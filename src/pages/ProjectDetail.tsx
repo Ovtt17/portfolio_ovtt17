@@ -9,6 +9,7 @@ const ProjectDetail: FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   const project = projects.find(p => p.slug === slug) as Project;
+  document.title = project ? `${project.title} - Ovett Mora` : "Project Not Found";
 
   if (!project) {
     return <div>Project not found</div>;
