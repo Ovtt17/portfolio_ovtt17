@@ -1,54 +1,85 @@
-# React + TypeScript + Vite
+# Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio developed with **React**, **TypeScript**, and **Vite**. Here, I showcase my projects, experience, skills, and contact information.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern and responsive design**: Adapted to look great on any device.
+- **Main sections**:
+  - Hero: Introduction and welcome.
+  - About Me: Personal information and skills.
+  - Experience: Timeline of my professional experience.
+  - Projects: Gallery of featured projects.
+  - Technologies: Tools and technologies I use.
+  - Contact: Form to send me messages directly.
+- **Animations**: Visual effects to enhance user experience.
+- **Optimization**: Fast loading thanks to Vite and resource optimization.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React**: Library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static typing.
+- **Vite**: Fast and lightweight development tool.
+- **CSS**: Custom styling.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Installation and Usage
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/Ovtt17/portfolio_ovtt17.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolio_ovtt17
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser at `http://localhost:5173` to view the application.
+
+## Available Scripts
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Generates an optimized production build.
+- `npm run preview`: Previews the production build.
+
+## Project Structure
+
+```plaintext
+src/
+├── assets/         # Icons, images, and videos
+├── components/     # Reusable components
+├── constants/      # Global constants
+├── context/        # React contexts
+├── data/           # Static data
+├── hooks/          # Custom hooks
+├── layouts/        # Page layouts
+├── lib/            # Utilities
+├── pages/          # Main pages
+├── types/          # TypeScript types
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Contributions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+If you want to contribute to this project, feel free to open an issue or submit a pull request. All help is welcome!
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## License
+
+This project is licensed under the MIT License. You can find more details in the `LICENSE` file.
+
+---
+
+Thank you for visiting my portfolio! 😊
