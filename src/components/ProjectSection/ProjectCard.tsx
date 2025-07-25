@@ -1,6 +1,6 @@
 import { ExpandIcon, ExternalLink, XIcon } from "lucide-react";
-import GitHubIcon from "../../assets/Icon/GitHubIcon";
-import type { Project } from '../../types/Project';
+import { GitHubIcon } from "@/assets/Icon/GitHubIcon";
+import type { Project } from '@/types/Project';
 import type { FC } from "react";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";

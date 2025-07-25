@@ -1,5 +1,5 @@
-import GitHubIcon from "../../assets/Icon/GitHubIcon";
-import LinkedInIcon from "../../assets/Icon/LinkedInIcon";
+import { GitHubIcon } from "@/assets/Icon/GitHubIcon";
+import { LinkedInIcon } from "@/assets/Icon/LinkedInIcon";
 
 const HeroButtons = () => (
   <div className="pt-1 flex items-center opacity-0 animate-fade-in-delay-4">

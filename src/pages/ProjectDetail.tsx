@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import GitHubIcon from "@/assets/Icon/GitHubIcon";
+import { GitHubIcon } from "@/assets/Icon/GitHubIcon";
 import type { Project } from "@/types/Project";
 import Navbar from "@/components/Navbar";
 import { projects } from "@/data/projects";
