@@ -1,7 +1,7 @@
 import type { AboutCardProps } from "../components/AboutSection/AboutCard";
-import CodeIcon from "../assets/Icon/CodeIcon";
-import EducationIcon from "../assets/Icon/EducationIcon";
-import UserCircleIcon from "../assets/Icon/UserCircleIcon";
+import { CodeIcon } from "../assets/Icon/CodeIcon";
+import { EducationIcon } from "../assets/Icon/EducationIcon";
+import { UserCircleIcon } from "../assets/Icon/UserCircleIcon";
 
 const rawCards = [
   {

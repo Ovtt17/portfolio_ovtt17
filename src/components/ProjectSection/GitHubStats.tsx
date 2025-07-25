@@ -1,5 +1,5 @@
 import GitHubCalendar from "react-github-calendar";
-import GitHubIcon from "../../assets/Icon/GitHubIcon";
+import { GitHubIcon } from "../../assets/Icon/GitHubIcon";
 
 const GitHubStats = () => {
   return (
@@ -19,7 +19,8 @@ const GitHubStats = () => {
           target="_blank"
           href="https://github.com/Ovtt17"
         >
-          Explore More on GitHub <GitHubIcon color="currentColor" className="w-8 h-8 text-white" />        </a>
+          Explore More on GitHub
+          <GitHubIcon color="currentColor" className="w-8 h-8 text-white" />        </a>
       </div>
     </>
   );
