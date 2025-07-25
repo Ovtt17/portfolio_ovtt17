@@ -17,16 +17,16 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <SectionProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <SectionProvider>
         <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
           <Route path="/projects/:slug" element={<ProjectPageLayout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </SectionProvider>
+      </SectionProvider>
+    </BrowserRouter>
   )
 }
 
