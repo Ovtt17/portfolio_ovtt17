@@ -101,7 +101,7 @@ const ProjectPageLayout: FC = () => {
                   {technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-4 py-2 bg-gray-900 rounded-lg text-white border border-gray-800"
+                      className="px-4 py-2 rounded-lg bg-background-secondary text-foreground/80 transition-all duration-300 hover:bg-primary hover:text-white border border-gray-800 cursor-pointer"
                     >
                       {tech}
                     </span>
