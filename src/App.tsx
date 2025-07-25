@@ -2,9 +2,8 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom"
 import { SectionProvider } from "@/context/SectionContext"
 import Home from "@/pages/Home"
 import NotFound from "@/pages/NotFound"
-import SurveyApp from "./pages/projects/SurveyApp"
-import WhatsAppClone from "./pages/projects/WhatsAppClone"
 import { useEffect } from "react"
+import ProjectPageLayout from "./layouts/ProjectPageLayout"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -23,8 +22,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/projects/survey-app" element={<SurveyApp />} />
-          <Route path="/projects/whatsapp-clone" element={<WhatsAppClone />} />
+          <Route path="/projects/:slug" element={<ProjectPageLayout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -3,7 +3,7 @@ import GitHubIcon from "../../assets/Icon/GitHubIcon";
 import type { Project } from '../../types/Project';
 import type { FC } from "react";
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   project: Project;
@@ -11,20 +11,28 @@ interface Props {
 
 const ProjectCard: FC<Props> = ({ project }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleOpen = () => setIsModalOpen(true);
   const handleClose = () => setIsModalOpen(false);
 
+  const handleCardClick = () => {
+    if (!isModalOpen) {
+      navigate(`/projects/${project.slug}`);
+    }
+  };
+
   return (
     <>
-      <Link
-        to={`/projects/${project.slug}`}
-        className="group gradient-border rounded-lg overflow-hidden shadow-xs"
+      <div
+        className="group gradient-border rounded-lg overflow-hidden shadow-xs cursor-pointer"
+        onClick={handleCardClick}
       >
         <div className="relative">
+          {/* Expand Button */}
           <div className="absolute top-2 right-2 z-10">
             <button
-              className="z-50 p-2 rounded-full bg-gray-800/80 text-gray-200 shadow-lg hover:bg-gray-700 transition-colors w-7 h-7 flex items-center justify-center cursor-pointer"
+              className="z-50 p-2 rounded-full bg-gray-800/80 text-gray-200 shadow-lg hover:bg-gray-700 transition-colors w-7 h-7 flex items-center justify-center"
               onClick={(e) => {
                 e.stopPropagation();
                 handleOpen();
@@ -36,12 +44,13 @@ const ProjectCard: FC<Props> = ({ project }) => {
             </button>
           </div>
 
+          {/* Image Preview */}
           <div
             onClick={(e) => {
               e.stopPropagation();
               handleOpen();
             }}
-            className="relative w-full h-0 pb-[56.25%] overflow-hidden cursor-pointer"
+            className="relative w-full h-0 pb-[56.25%] overflow-hidden"
           >
             <img
               src={project.image}
@@ -51,9 +60,12 @@ const ProjectCard: FC<Props> = ({ project }) => {
           </div>
         </div>
 
+        {/* Content */}
         <div className="px-6 py-4">
-          <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+          <h3 className="text-xl font-semibold mb-1 text-primary">{project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
+
+          {/* Tags */}
           <div className="flex flex-wrap justify-center gap-2 mb-4">
             {project.tags.map((tag, index) => (
               <span
@@ -64,11 +76,14 @@ const ProjectCard: FC<Props> = ({ project }) => {
               </span>
             ))}
           </div>
+
+          {/* Links */}
           <div className="flex justify-center items-center space-x-3">
             {project.demoUrl && (
               <a
                 href={project.demoUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground hover:text-primary transition-colors duration-300"
               >
                 <ExternalLink className="w-10 h-10" />
@@ -78,6 +93,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
               <a
                 href={project.codeUrl}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-foreground hover:text-primary transition-colors duration-300"
               >
                 <GitHubIcon className="w-10 h-10" />
@@ -85,8 +101,9 @@ const ProjectCard: FC<Props> = ({ project }) => {
             )}
           </div>
         </div>
-      </Link>
+      </div>
 
+      {/* Modal */}
       {isModalOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
@@ -97,7 +114,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className="absolute top-2 right-2 z-50 p-2 rounded-full bg-gray-800/80 text-gray-200 shadow-lg hover:bg-gray-700 transition-colors w-7 h-7 flex items-center justify-center cursor-pointer"
+              className="absolute top-2 right-2 z-50 p-2 rounded-full bg-gray-800/80 text-gray-200 shadow-lg hover:bg-gray-700 transition-colors w-7 h-7 flex items-center justify-center"
               onClick={handleClose}
               aria-label="Cerrar"
               type="button"

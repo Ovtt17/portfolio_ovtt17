@@ -1,14 +1,19 @@
-import type { FC, ReactNode } from "react";
+import type { FC } from "react";
 import GitHubIcon from "@/assets/Icon/GitHubIcon";
 import type { Project } from "@/types/Project";
 import Navbar from "@/components/Navbar";
+import { projects } from "@/data/projects";
+import { useParams } from "react-router-dom";
 
-interface ProjectPageLayoutProps {
-  project: Project;
-  children?: ReactNode;
-}
+const ProjectPageLayout: FC = () => {
+  const { slug } = useParams<{ slug: string }>();
 
-const ProjectPageLayout: FC<ProjectPageLayoutProps> = ({ project, children }) => {
+  const project = projects.find(p => p.slug === slug) as Project;
+
+  if (!project) {
+    return <div>Project not found</div>;
+  }
+
   const {
     title,
     description,
@@ -49,7 +54,7 @@ const ProjectPageLayout: FC<ProjectPageLayoutProps> = ({ project, children }) =>
               <img
                 src={image}
                 alt={`${title} cover`}
-                className="w-full h-full object-cover rounded-lg"
+                className="w-full h-full object-contain rounded-lg"
               />
             </figure>
           )}
@@ -78,7 +83,7 @@ const ProjectPageLayout: FC<ProjectPageLayoutProps> = ({ project, children }) =>
                 <iframe
                   src={videoDemo}
                   title={`${title} video demo`}
-                  className="w-full aspect-[16/9] rounded-lg shadow-lg mb-6"
+                  className="w-full aspect-[16/9] object-contain rounded-lg shadow-lg mb-6"
                   allowFullScreen
                 ></iframe>
               </div>
@@ -123,7 +128,6 @@ const ProjectPageLayout: FC<ProjectPageLayoutProps> = ({ project, children }) =>
                 </a>
               </div>
             )}
-            {children}
           </section>
         </div>
       </section>

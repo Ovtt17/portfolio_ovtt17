@@ -11,7 +11,6 @@ export const projects: Project[] = [
     descriptionExtend:
       "This project is designed to manage inventory and sales for a real business, providing a comprehensive solution for tracking products, sales, and inventory levels. It includes secure user authentication using OAuth2.0 and JWT, allowing for safe access to the system. The application also integrates with AWS S3 for file storage, enabling users to upload and manage product images efficiently. Built with a modular architecture using Spring Boot for the backend and React for the frontend, it ensures scalability and maintainability.",
     image: "/src/assets/images/projects/heycha-inventory/heycha-inventory.webp",
-    videoDemo: "/src/assets/videos/projects/heycha-inventory/heycha-inventory.mp4",
     tags: ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "JWT", "OAuth2.0", "MySQL", "AWS S3", "Email Sending"],
   },
   {
