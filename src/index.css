@@ -129,6 +129,13 @@
       0 0 15px #40c9ff;
   }
 
+  .gradient-text {
+    background: linear-gradient(to bottom right, #ec4899, #7e22ce, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .typing-animation {
     animation: typing 3s steps(40) infinite, cursor 1s step-end infinite;
     border-right: 2px solid white;
