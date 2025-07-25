@@ -2,6 +2,7 @@ import type { FC } from "react";
 import { motion } from "framer-motion";
 import { navItems } from "../../constants/navItems";
 import { cn } from "../../lib/utils";
+import { useSectionContext } from "@/context/SectionContext";
 
 interface NavbarDesktopProps {
   hoveredIndex: number | null;
@@ -10,6 +11,12 @@ interface NavbarDesktopProps {
 }
 
 const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, activeIndex }) => {
+  const { scrollToSection } = useSectionContext();
+
+  const handleScroll = (href: string) => {
+    const sectionName = href.replace("/#", "");
+    scrollToSection(sectionName);
+  }
 
   return (
     <motion.div
@@ -23,10 +30,10 @@ const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, 
         const isActive = activeIndex === index;
         return (
           <div key={index} className="relative flex flex-col items-center">
-            <a
-              href={item.href}
+            <button
+              onClick={() => handleScroll(item.href)}
               className={cn(
-                "flex items-center gap-2 px-3 py-1.5 rounded-full transition duration-300 text-foreground text-base font-medium",
+                "flex items-center gap-2 px-3 py-1.5 rounded-full transition duration-300 text-foreground text-base font-medium cursor-pointer",
                 isDimmed ? "opacity-40" : "opacity-100"
               )}
               onMouseEnter={() => setHoveredIndex(index)}
@@ -34,7 +41,7 @@ const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, 
             >
               <span className="flex items-center justify-center">{item.icon}</span>
               <span>{item.name}</span>
-            </a>
+            </button>
             {/* Animated underline: visible on hover or active */}
             <motion.div
               layoutId="navbar-underline"

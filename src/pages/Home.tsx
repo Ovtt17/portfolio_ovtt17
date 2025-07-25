@@ -5,8 +5,25 @@ import Navbar from "../components/Navbar";
 import ProjectSection from "@/components/ProjectSection";
 import TechnologiesSection from "@/components/TechnologiesSection";
 import ContactSection from "@/components/ContactSection";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const sectionId = location.state?.scrollTo;
+    if (sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location.state]);
+
   return (
     <div className="min-h-screen text-foreground overflow-x-hidden">
       {/* Navbar */}

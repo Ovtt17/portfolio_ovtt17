@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import { projects } from "@/data/projects";
 import { useParams } from "react-router-dom";
 
-const ProjectPageLayout: FC = () => {
+const ProjectDetail: FC = () => {
   const { slug } = useParams<{ slug: string }>();
 
   const project = projects.find(p => p.slug === slug) as Project;
@@ -135,4 +135,4 @@ const ProjectPageLayout: FC = () => {
   );
 };
 
-export default ProjectPageLayout;
+export default ProjectDetail;

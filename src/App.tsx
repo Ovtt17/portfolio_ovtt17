@@ -3,7 +3,7 @@ import { SectionProvider } from "@/context/SectionContext"
 import Home from "@/pages/Home"
 import NotFound from "@/pages/NotFound"
 import { useEffect } from "react"
-import ProjectPageLayout from "./layouts/ProjectPageLayout"
+import ProjectDetail from "@/pages/ProjectDetail"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -17,16 +17,16 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <SectionProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <SectionProvider>
         <ScrollToTop />
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/projects/:slug" element={<ProjectPageLayout />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </SectionProvider>
+      </SectionProvider>
+    </BrowserRouter>
   )
 }
 
