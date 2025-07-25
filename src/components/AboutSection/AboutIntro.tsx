@@ -1,7 +1,7 @@
 const AboutIntro = () => (
   <div className="space-y-6">
     <h3 className="text-2xl font-semibold">
-      <span className="text-primary opacity-0 animate-fade-in-delay-2">Back-End</span>{" "}
+      <span className="gradient-text opacity-0 animate-fade-in-delay-2">Back-End</span>{" "}
       <span className="opacity-0 animate-fade-in-delay-3">Web Developer</span>
     </h3>
 
