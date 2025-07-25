@@ -3,6 +3,7 @@ import GitHubIcon from "../../assets/Icon/GitHubIcon";
 import type { Project } from '../../types/Project';
 import type { FC } from "react";
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 interface Props {
   project: Project;
@@ -16,20 +17,30 @@ const ProjectCard: FC<Props> = ({ project }) => {
 
   return (
     <>
-      <div className="group gradient-border rounded-lg overflow-hidden shadow-xs">
+      <Link
+        to={`/projects/${project.slug}`}
+        className="group gradient-border rounded-lg overflow-hidden shadow-xs"
+      >
         <div className="relative">
           <div className="absolute top-2 right-2 z-10">
             <button
               className="z-50 p-2 rounded-full bg-gray-800/80 text-gray-200 shadow-lg hover:bg-gray-700 transition-colors w-7 h-7 flex items-center justify-center cursor-pointer"
-              onClick={handleOpen}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleOpen();
+              }}
               aria-label="Expandir"
               type="button"
             >
               <ExpandIcon />
             </button>
           </div>
+
           <div
-            onClick={handleOpen}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleOpen();
+            }}
             className="relative w-full h-0 pb-[56.25%] overflow-hidden cursor-pointer"
           >
             <img
@@ -74,7 +85,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
             )}
           </div>
         </div>
-      </div>
+      </Link>
 
       {isModalOpen && (
         <div
