@@ -128,6 +128,32 @@
       0 0 8px #991cff,
       0 0 15px #40c9ff;
   }
+
+  .typing-animation {
+    animation: typing 3s steps(40) infinite, cursor 1s step-end infinite;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+  }
+
+  @keyframes typing {
+    from {
+      max-width: 0;
+    }
+    to {
+      max-width: 100%;
+    }
+  }
+
+  @keyframes cursor {
+    0%, 100% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+  }
 }
 
 @utility container {
