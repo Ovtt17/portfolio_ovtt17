@@ -65,14 +65,14 @@ const ProjectCard: FC<Props> = ({ project }) => {
           <h3 className="text-xl font-semibold mb-1 text-primary">{project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
-          {/* Tags */}
+          {/* Technologies */}
           <div className="flex flex-wrap justify-center gap-2 mb-4">
-            {project.tags.map((tag, index) => (
+            {project.technologies.map((tech, index) => (
               <span
                 key={index}
                 className="px-2 py-1 text-xs font-medium border rounded-full bg-background-secondary text-foreground/80 transition-all duration-300 hover:bg-primary hover:text-white"
               >
-                {tag}
+                {tech}
               </span>
             ))}
           </div>

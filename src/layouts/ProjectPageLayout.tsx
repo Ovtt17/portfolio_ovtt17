@@ -21,7 +21,7 @@ const ProjectPageLayout: FC = () => {
     role,
     image,
     videoDemo,
-    tags = [],
+    technologies = [],
     codeUrl,
   } = project;
 
@@ -90,7 +90,7 @@ const ProjectPageLayout: FC = () => {
             )}
 
             {/* Technologies */}
-            {tags.length > 0 && (
+            {technologies.length > 0 && (
               <div>
                 <h2
                   className="inline-block text-2xl md:text-3xl font-bold capitalize gradient-text whitespace-nowrap overflow-hidden mb-4"
@@ -98,7 +98,7 @@ const ProjectPageLayout: FC = () => {
                   Technologies
                 </h2>
                 <div className="flex flex-wrap justify-center gap-4 mb-6">
-                  {tags.map((tech) => (
+                  {technologies.map((tech) => (
                     <span
                       key={tech}
                       className="px-4 py-2 bg-gray-900 rounded-lg text-white border border-gray-800"

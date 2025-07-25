@@ -7,7 +7,7 @@ export interface Project {
   descriptionExtend?: string;
   image: string;
   videoDemo?: string;
-  tags: string[];
+  technologies: string[];
   demoUrl?: string;
   codeUrl?: string;
 }
