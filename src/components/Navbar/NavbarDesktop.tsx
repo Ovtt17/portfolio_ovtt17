@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { navItems } from "../../constants/navItems";
 import { cn } from "../../lib/utils";
 import { useSectionContext } from "@/context/SectionContext";
+import { useTranslation } from "react-i18next";
 
 interface NavbarDesktopProps {
   hoveredIndex: number | null;
@@ -10,13 +11,18 @@ interface NavbarDesktopProps {
   activeIndex?: number | null;
 }
 
-const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, activeIndex }) => {
+const NavbarDesktop: FC<NavbarDesktopProps> = ({
+  hoveredIndex,
+  setHoveredIndex,
+  activeIndex,
+}) => {
+  const { t } = useTranslation("navbar");
   const { scrollToSection } = useSectionContext();
 
   const handleScroll = (href: string) => {
     const sectionName = href.replace("/#", "");
     scrollToSection(sectionName);
-  }
+  };
 
   return (
     <motion.div
@@ -40,9 +46,10 @@ const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, 
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <span className="flex items-center justify-center">{item.icon}</span>
-              <span>{item.name}</span>
+              <span>{t(item.name)}</span>
             </button>
-            {/* Animated underline: visible on hover or active */}
+
+            {/* Animated underline */}
             <motion.div
               layoutId="navbar-underline"
               className="absolute -bottom-1 left-0 h-[2px] bg-primary rounded-full"
@@ -55,8 +62,6 @@ const NavbarDesktop: FC<NavbarDesktopProps> = ({ hoveredIndex, setHoveredIndex, 
       })}
     </motion.div>
   );
-}
-
-
+};
 
 export default NavbarDesktop;

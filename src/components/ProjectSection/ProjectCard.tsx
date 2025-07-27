@@ -4,6 +4,7 @@ import type { Project } from '@/types/Project';
 import type { FC } from "react";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   project: Project;
@@ -12,13 +13,15 @@ interface Props {
 const ProjectCard: FC<Props> = ({ project }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
   const handleOpen = () => setIsModalOpen(true);
   const handleClose = () => setIsModalOpen(false);
 
   const handleCardClick = () => {
     if (!isModalOpen) {
-      navigate(`/projects/${project.slug}`);
+      const lang = i18n.language || "en";
+      navigate(`/${lang}/projects/${project.slug}`);
     }
   };
 

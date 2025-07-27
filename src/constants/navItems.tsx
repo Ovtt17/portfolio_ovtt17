@@ -13,10 +13,10 @@ export interface NavItem {
 const props = "text-primary";
 
 export const navItems: NavItem[] = [
-  { name: "Home", href: "/#hero", icon: <HomeIcon className={props} /> },
-  { name: "About Me", href: "/#about", icon: <UserCircleIcon className={props} /> },
-  { name: "Experience", href: "/#experience", icon: <ToolsIcon className={props} /> },
-  { name: "Projects", href: "/#projects", icon: <CodeIcon className={props} /> },
-  { name: "Technologies", href: "/#technologies", icon: <CodeIcon className={props} /> },
-  { name: "Contact", href: "/#contact", icon: <SendIcon className={props} /> },
+  { name: "home", href: "#hero", icon: <HomeIcon className={props} /> },
+  { name: "about", href: "#about", icon: <UserCircleIcon className={props} /> },
+  { name: "experience", href: "#experience", icon: <ToolsIcon className={props} /> },
+  { name: "projects", href: "#projects", icon: <CodeIcon className={props} /> },
+  { name: "technologies", href: "#technologies", icon: <CodeIcon className={props} /> },
+  { name: "contact", href: "#contact", icon: <SendIcon className={props} /> },
 ];

@@ -1,16 +1,16 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import LanguageDetector from 'i18next-browser-languagedetector';
 
 import enNavbar from "@/utils/locales/en/navbar/navbar.json";
 import esNavbar from "@/utils/locales/es/navbar/navbar.json";
 
-const urlLanguage = new URL(window.location.href).searchParams.get("lang");
-const savedLanguage = urlLanguage || localStorage.getItem("language") || "en";
+const pathLangMatch = window.location.pathname.match(/^\/(en|es)(\/|$)/);
+const detectedLanguage = pathLangMatch ? pathLangMatch[1] : "en";
+
+const savedLanguage = localStorage.getItem("language") || detectedLanguage;
 
 i18n
   .use(initReactI18next)
-  .use(LanguageDetector)
   .init({
     resources: {
       en: {
