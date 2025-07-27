@@ -19,7 +19,7 @@ const AboutIntro = () => {
       </p>
 
       <div className="flex flex-row gap-4 pt-4 justify-center">
-        <a href="#contact" className="cosmic-button">
+        <a href="#about" className="cosmic-button cursor-not-allowed">
           {t("intro.cta.downloadCV")}
         </a>
       </div>

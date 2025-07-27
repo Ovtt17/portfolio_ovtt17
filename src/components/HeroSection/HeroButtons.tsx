@@ -17,8 +17,8 @@ const HeroButtons = () => {
           </a>
 
           <a
-            href=""
-            className="px-4 py-2 text-sm sm:text-base text-center rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+            href="#hero"
+            className="px-4 py-2 text-sm sm:text-base text-center rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 cursor-not-allowed"
           >
             {t("downloadCV")}
           </a>
