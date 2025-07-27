@@ -28,7 +28,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
   return (
     <>
       <div
-        className="group gradient-border rounded-lg overflow-hidden shadow-xs cursor-pointer"
+        className="group gradient-border rounded-lg overflow-hidden shadow-xs cursor-pointer flex flex-col justify-between"
         onClick={handleCardClick}
       >
         <div className="relative">
@@ -64,7 +64,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
         </div>
 
         {/* Content */}
-        <div className="px-6 py-4">
+        <div className="px-6 py-4 flex-grow">
           <h3 className="text-xl font-semibold mb-1 text-primary">{project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
@@ -79,30 +79,30 @@ const ProjectCard: FC<Props> = ({ project }) => {
               </span>
             ))}
           </div>
+        </div>
 
-          {/* Links */}
-          <div className="flex justify-center items-center space-x-3">
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                <ExternalLink className="w-10 h-10" />
-              </a>
-            )}
-            {project.codeUrl && (
-              <a
-                href={project.codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                <GitHubIcon className="w-10 h-10" />
-              </a>
-            )}
-          </div>
+        {/* Links */}
+        <div className="flex justify-center items-center space-x-3 px-6 py-4">
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary transition-colors duration-300"
+            >
+              <ExternalLink className="w-10 h-10" />
+            </a>
+          )}
+          {project.codeUrl && (
+            <a
+              href={project.codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary transition-colors duration-300"
+            >
+              <GitHubIcon className="w-10 h-10" />
+            </a>
+          )}
         </div>
       </div>
 
