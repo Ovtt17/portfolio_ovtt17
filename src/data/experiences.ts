@@ -16,5 +16,5 @@ export const experiences: Experience[] = [
       'Deployed backend services on Railway with MySQL for data persistence and used AWS S3 for secure asset storage.',
       'Provided ongoing maintenance and feature updates to meet evolving client needs, enhancing operational efficiency.',
     ],
-  },
+  }
 ];

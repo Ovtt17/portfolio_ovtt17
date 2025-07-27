@@ -1,0 +1,23 @@
+{
+  "header": {
+    "title": "Experiencia"
+  },
+  "experiences": [
+    {
+      "id": "job1",
+      "title": "Freelance - Sistema de Inventario para Heycha",
+      "position": "Desarrollador Full-Stack",
+      "url": "",
+      "startDate": "Diciembre 2024",
+      "endDate": "Presente",
+      "description": [
+        "Desarrollé Heycha Inventory System, un sistema interno seguro para gestionar inventarios, ventas y pedidos importados en una tienda minorista.",
+        "Construí API backend con Spring Boot (Java 17) y el frontend con React, TypeScript y Tailwind CSS.",
+        "Implementé autenticación y autorización utilizando JWT y OAuth 2.0, incluyendo la integración de inicio de sesión con Google.",
+        "Añadí filtrado avanzado de productos por múltiples criterios para mejorar la eficiencia en las búsquedas.",
+        "Desplegué los servicios backend en Railway con MySQL para la persistencia de datos y utilicé AWS S3 para el almacenamiento seguro de activos.",
+        "Proporcioné mantenimiento continuo y actualizaciones de funcionalidades para adaptarme a las necesidades cambiantes del cliente, mejorando así la eficiencia operativa."
+      ]
+    }
+  ]
+}
