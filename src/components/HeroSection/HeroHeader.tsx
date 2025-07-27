@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
 
 const HeroHeader = () => {
-  const { t } = useTranslation("hero");
+  const { t, i18n } = useTranslation("hero");
+  const currentLanguage = i18n.language;
 
   return (
     <header>
@@ -12,8 +14,20 @@ const HeroHeader = () => {
         <span role="img" aria-label="waving hand" className="animate-wave">👋</span>
       </p>
       <h1 className="flex flex-col sm:flex-row sm:gap-2 text-4xl lg:text-6xl font-bold tracking-tight leading-tight text-left">
-        <span className="gradient-text opacity-0 animate-fade-in-delay-1">{t("role.part1")}</span>
-        <span className="opacity-0 animate-fade-in-delay-2">{t("role.part2")}</span>
+        <span
+          className={cn("opacity-0 animate-fade-in-delay-1", {
+            "gradient-text": currentLanguage === "en",
+          })}
+        >
+          {t("role.part1")}
+        </span>
+        <span
+          className={cn("opacity-0 animate-fade-in-delay-2", {
+            "gradient-text": currentLanguage === "es",
+          })}
+        >
+          {t("role.part2")}
+        </span>
       </h1>
     </header>
   );

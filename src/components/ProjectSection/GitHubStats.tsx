@@ -1,13 +1,30 @@
 import GitHubCalendar from "react-github-calendar";
 import { GitHubIcon } from "../../assets/Icon/GitHubIcon";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
 
 const GitHubStats = () => {
+  const { t, i18n } = useTranslation("project");
+  const currentLanguage = i18n.language;
+
   return (
     <>
       <div className="flex flex-col justify-center items-center pt-6 pb-2">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
-          <span className="gradient-text opacity-0 animate-fade-in">GitHub</span>{" "}
-          <span className="opacity-0 animate-fade-in-delay-1">Calendar</span>
+          <span
+            className={cn("opacity-0 animate-fade-in", {
+              "gradient-text": currentLanguage === "en",
+            })}
+          >
+            {t("github-calendar.title.part1")}
+          </span>{" "}
+          <span
+            className={cn("opacity-0 animate-fade-in-delay-1", {
+              "gradient-text": currentLanguage === "es",
+            })}
+          >
+            {t("github-calendar.title.part2")}
+          </span>
         </h2>
         <div className="w-full max-w-5xl flex justify-center items-center">
           <GitHubCalendar username="Ovtt17" />
@@ -19,8 +36,9 @@ const GitHubStats = () => {
           target="_blank"
           href="https://github.com/Ovtt17"
         >
-          Explore More on GitHub
-          <GitHubIcon color="currentColor" className="w-8 h-8 text-white" />        </a>
+          {t("github-calendar.button")}
+          <GitHubIcon color="currentColor" className="w-8 h-8 text-white" />
+        </a>
       </div>
     </>
   );

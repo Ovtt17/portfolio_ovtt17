@@ -2,12 +2,17 @@ import type { FC } from "react";
 import { GitHubIcon } from "@/assets/Icon/GitHubIcon";
 import type { Project } from "@/types/Project";
 import Navbar from "@/components/Navbar";
-import { projects } from "@/data/projects";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
+import { useTranslation } from "react-i18next";
 
 const ProjectDetail: FC = () => {
   const { slug } = useParams<{ slug: string }>();
+  // project.json
+  const { t } = useTranslation("project");
+
+  // object with all projects inside project.json
+  const projects = t("projects", { returnObjects: true }) as Project[];
 
   const project = projects.find(p => p.slug === slug) as Project;
   document.title = project ? `${project.title} - Ovett Mora` : "Project Not Found";
@@ -43,7 +48,7 @@ const ProjectDetail: FC = () => {
           <div>
             <h1
               id="title"
-              className="inline-block text-3xl md:text-4xl font-extrabold uppercase gradient-text whitespace-nowrap overflow-hidden border-r-2 border-white typing-animation"
+              className="block text-3xl md:text-4xl font-extrabold uppercase gradient-text border-r-2 border-white typing-animation"
             >
               {title}
             </h1>
@@ -69,7 +74,7 @@ const ProjectDetail: FC = () => {
                 <h2
                   className="inline-block text-2xl md:text-3xl font-bold capitalize gradient-text whitespace-nowrap overflow-hidden mb-4"
                 >
-                  Description
+                  {t("details.description")}
                 </h2>
                 <p className="text-white font-light mb-6">{descriptionExtend}</p>
               </div>
@@ -80,7 +85,7 @@ const ProjectDetail: FC = () => {
                 <h2
                   className="inline-block text-2xl md:text-3xl font-bold capitalize gradient-text whitespace-nowrap overflow-hidden mb-4"
                 >
-                  Video Demo
+                  {t("details.videoDemo")}
                 </h2>
                 <iframe
                   src={videoDemo}
@@ -93,11 +98,11 @@ const ProjectDetail: FC = () => {
 
             {/* Technologies */}
             {technologies.length > 0 && (
-              <div>
+              <div className="flex flex-col gap-8 px-2">
                 <h2
                   className="inline-block text-2xl md:text-3xl font-bold capitalize gradient-text whitespace-nowrap overflow-hidden mb-4"
                 >
-                  Technologies
+                  {t("details.technologies")}
                 </h2>
                 <div className="flex flex-wrap justify-center gap-4 mb-6">
                   {technologies.map((tech) => (
@@ -119,13 +124,13 @@ const ProjectDetail: FC = () => {
                   href={codeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="View source code on GitHub"
-                  title="View code on GitHub"
+                  aria-label={t("details.viewCodeAreaLabel")}
+                  title={t("details.viewCodeAreaLabel")}
                   className="flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-700 bg-background hover:bg-gray-800 hover:border-gray-600 transition-colors duration-300 group"
                 >
                   <GitHubIcon className="w-6 h-6 text-foreground group-hover:text-primary transition-colors duration-300" />
                   <span className="text-sm font-medium text-foreground group-hover:text-primary">
-                    View Code
+                    {t("details.viewCode")}
                   </span>
                 </a>
               </div>
