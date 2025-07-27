@@ -11,12 +11,13 @@
       "startDate": "December 2024",
       "endDate": "Present",
       "description": [
-        "Developed Heycha Inventory System, a secure internal system for managing inventory, sales, and imported orders for a retail store.",
-        "Built backend API with Spring Boot (Java 17) and frontend with React, TypeScript, and Tailwind CSS.",
-        "Implemented authentication and authorization using JWT and OAuth 2.0, including Google login integration.",
-        "Implemented advanced product filtering by multiple criteria to improve search efficiency.",
-        "Deployed backend services on Railway with MySQL for data persistence and used AWS S3 for secure asset storage.",
-        "Provided ongoing maintenance and feature updates to meet evolving client needs, enhancing operational efficiency."
+        "Developed a secure internal system for managing inventory, sales, orders, and shipments in a retail store, optimizing operational efficiency.",
+        "Built a modern backend API using Spring Boot (Java 17) and a responsive frontend with React, TypeScript, and Tailwind CSS.",
+        "Implemented authentication and authorization with JWT and OAuth 2.0, including Google login integration.",
+        "Added advanced product filtering features to enhance search functionality and user experience.",
+        "Deployed backend services on Railway with MySQL for data persistence and utilized AWS S3 for secure asset storage.",
+        "Provided continuous maintenance and updates to meet client needs, ensuring scalability and performance.",
+        "Managed shipments and handled transactions in two types of currencies to facilitate operations with dollars and cordobas."
       ]
     }
   ]

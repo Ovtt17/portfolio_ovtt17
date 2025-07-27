@@ -5,18 +5,19 @@
   "experiences": [
     {
       "id": "job1",
-      "title": "Freelance - Sistema de Inventario para Heycha",
+      "title": "Freelance - Sistema de Inventario para Hey! Cha",
       "position": "Desarrollador Full-Stack",
       "url": "",
       "startDate": "Diciembre 2024",
       "endDate": "Presente",
       "description": [
-        "Desarrollé Heycha Inventory System, un sistema interno seguro para gestionar inventarios, ventas y pedidos importados en una tienda minorista.",
-        "Construí API backend con Spring Boot (Java 17) y el frontend con React, TypeScript y Tailwind CSS.",
-        "Implementé autenticación y autorización utilizando JWT y OAuth 2.0, incluyendo la integración de inicio de sesión con Google.",
-        "Añadí filtrado avanzado de productos por múltiples criterios para mejorar la eficiencia en las búsquedas.",
-        "Desplegué los servicios backend en Railway con MySQL para la persistencia de datos y utilicé AWS S3 para el almacenamiento seguro de activos.",
-        "Proporcioné mantenimiento continuo y actualizaciones de funcionalidades para adaptarme a las necesidades cambiantes del cliente, mejorando así la eficiencia operativa."
+        "Desarrollé un sistema interno seguro para gestionar inventarios, ventas, pedidos y envíos en una tienda minorista, optimizando la eficiencia operativa.",
+        "Construí una API backend utilizando Spring Boot (Java 17) y un frontend moderno con React, TypeScript y Tailwind CSS.",
+        "Implementé autenticación y autorización con JWT y OAuth 2.0, incluyendo integración de inicio de sesión con Google.",
+        "Añadí funcionalidades avanzadas de filtrado de productos para mejorar la experiencia de búsqueda.",
+        "Desplegué el backend en Railway con MySQL para la persistencia de datos y utilicé AWS S3 para el almacenamiento seguro de activos.",
+        "Proporcioné mantenimiento continuo y actualizaciones para adaptarme a las necesidades del cliente, asegurando escalabilidad y rendimiento.",
+        "Administré envíos y gestioné transacciones en dos tipos de monedas para facilitar las operaciones con dólares y córdobas."
       ]
     }
   ]
