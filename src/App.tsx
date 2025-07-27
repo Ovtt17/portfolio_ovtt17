@@ -3,11 +3,13 @@ import NotFound from "@/pages/NotFound"
 import LocalizedLayout from "@/layouts/LocalizedLayout"
 
 function App() {
+  const savedLanguage = localStorage.getItem("language") || "en"
+
   return (
     <BrowserRouter>
       <Routes>
-        {/* Redirect / to /en by default */}
-        <Route path="/" element={<Navigate to="/en" replace />} />
+        {/* Redirect / to the saved language or 'en' by default */}
+        <Route path="/" element={<Navigate to={`/${savedLanguage}`} replace />} />
 
         {/* Routes with language prefix */}
         <Route path="/:lang/*" element={<LocalizedLayout />} />
