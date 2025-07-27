@@ -1,0 +1,16 @@
+{
+  "header": {
+    "title1": "Contact",
+    "title2": "Me"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "messagePlaceholder": "Leave your message here",
+    "submit": "Send",
+    "submitting": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Error sending message. Please try again."
+  }
+}

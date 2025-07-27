@@ -4,6 +4,7 @@ import type { Project } from '@/types/Project';
 import type { FC } from "react";
 import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   project: Project;
@@ -12,20 +13,22 @@ interface Props {
 const ProjectCard: FC<Props> = ({ project }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
+  const { i18n } = useTranslation();
 
   const handleOpen = () => setIsModalOpen(true);
   const handleClose = () => setIsModalOpen(false);
 
   const handleCardClick = () => {
     if (!isModalOpen) {
-      navigate(`/projects/${project.slug}`);
+      const lang = i18n.language || "en";
+      navigate(`/${lang}/projects/${project.slug}`);
     }
   };
 
   return (
     <>
       <div
-        className="group gradient-border rounded-lg overflow-hidden shadow-xs cursor-pointer"
+        className="group gradient-border rounded-lg overflow-hidden shadow-xs cursor-pointer flex flex-col justify-between"
         onClick={handleCardClick}
       >
         <div className="relative">
@@ -61,8 +64,8 @@ const ProjectCard: FC<Props> = ({ project }) => {
         </div>
 
         {/* Content */}
-        <div className="px-6 py-4">
-          <h3 className="text-xl font-semibold mb-1 text-primary">{project.title}</h3>
+        <div className="px-6 py-4 flex-grow">
+          <h3 className="mb-1 text-xl font-extrabold uppercase gradient-text">{project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
           {/* Technologies */}
@@ -76,30 +79,30 @@ const ProjectCard: FC<Props> = ({ project }) => {
               </span>
             ))}
           </div>
+        </div>
 
-          {/* Links */}
-          <div className="flex justify-center items-center space-x-3">
-            {project.demoUrl && (
-              <a
-                href={project.demoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                <ExternalLink className="w-10 h-10" />
-              </a>
-            )}
-            {project.codeUrl && (
-              <a
-                href={project.codeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors duration-300"
-              >
-                <GitHubIcon className="w-10 h-10" />
-              </a>
-            )}
-          </div>
+        {/* Links */}
+        <div className="flex justify-center items-center space-x-3 px-6 py-4">
+          {project.demoUrl && (
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary transition-colors duration-300"
+            >
+              <ExternalLink className="w-10 h-10" />
+            </a>
+          )}
+          {project.codeUrl && (
+            <a
+              href={project.codeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-primary transition-colors duration-300"
+            >
+              <GitHubIcon className="w-10 h-10" />
+            </a>
+          )}
         </div>
       </div>
 

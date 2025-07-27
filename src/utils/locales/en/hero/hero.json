@@ -1,0 +1,11 @@
+{
+  "greeting": "Hi, I'm",
+  "role": {
+    "part1": "Back-End",
+    "part2": "Developer"
+  },
+  "description": "I'm a software engineer specializing in ",
+  "descriptionSuffix": ", building scalable and modern solutions.",
+  "getInTouch": "Get In Touch",
+  "downloadCV": "Download CV"
+}

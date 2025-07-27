@@ -3,6 +3,7 @@ import { useSectionContext } from "../../context/SectionContext";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
 import NavbarToggle from "./NavbarToggle";
+import LanguageSwitch from "./LanguageSwitch";
 
 const Navbar = () => {
   const { activeIndex } = useSectionContext();
@@ -40,6 +41,11 @@ const Navbar = () => {
         setHoveredIndex={setHoveredIndex}
         activeIndex={activeIndex}
       />
+
+      {/* Language Switch */}
+      <div className="absolute right-4 top-1/2 -translate-y-1/2 flex gap-2">
+        <LanguageSwitch />
+      </div>
     </nav>
   );
 };

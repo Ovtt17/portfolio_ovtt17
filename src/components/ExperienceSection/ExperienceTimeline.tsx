@@ -1,47 +1,44 @@
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import ExperienceCard from './ExperienceCard';
-import { experiences } from '@/data/experiences';
+import type { Experience } from '@/types/Experience';
 
 const ExperienceTimeline = () => {
   const itemsRef = useRef<(HTMLLIElement | null)[]>([]);
+  const { t } = useTranslation('experience');
+
+  // Esto es clave: cargamos la lista desde el archivo de traducción
+  const experiences = t('experiences', { returnObjects: true }) as Experience[];
 
   useEffect(() => {
     if (!itemsRef.current) return;
 
-    const observerOptions = {
-      root: null,
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        const dot = entry.target.querySelector('.dot');
-        if (dot) {
-          if (entry.isIntersecting) {
-            dot.classList.add('active-dot');
-          } else {
-            dot.classList.remove('active-dot');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const dot = entry.target.querySelector('.dot');
+          if (dot) {
+            dot.classList.toggle('active-dot', entry.isIntersecting);
           }
-        }
-      });
-    }, observerOptions);
+        });
+      },
+      { root: null, threshold: 0.5 }
+    );
 
     itemsRef.current.forEach((item) => {
       if (item) observer.observe(item);
     });
 
     return () => {
-      if (itemsRef.current) {
-        itemsRef.current.forEach((item) => {
-          if (item) observer.unobserve(item);
-        });
-      }
+      itemsRef.current.forEach((item) => {
+        if (item) observer.unobserve(item);
+      });
     };
   }, []);
 
   return (
     <ol className="timeline">
-      {experiences.map((exp, idx) => (
+      {experiences.map((exp: Experience, idx: number) => (
         <li
           key={idx}
           ref={(el) => { itemsRef.current[idx] = el; }}

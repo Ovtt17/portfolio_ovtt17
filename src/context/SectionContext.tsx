@@ -17,7 +17,7 @@ export const SectionProvider: React.FC<{ children: React.ReactNode }> = ({ child
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => {
-        const id = item.href.replace("/#", "");
+        const id = item.href.replace("#", "");
         return document.getElementById(id);
       });
       const scrollY = window.scrollY + window.innerHeight / 3;
@@ -40,22 +40,26 @@ export const SectionProvider: React.FC<{ children: React.ReactNode }> = ({ child
   }, []);
 
   const scrollToSection = (sectionHref: string) => {
-    const sectionId = sectionHref.replace("/#", "");
+    const sectionId = sectionHref.replace("#", "");
     const el = document.getElementById(sectionId);
 
-    if (location.pathname !== "/") {
-      navigate("/", { state: { scrollTo: sectionId } });
-      window.history.pushState(null, "", `/#${sectionId}`);
+    // Extract current language from pathname (e.g., /en, /es)
+    const langMatch = location.pathname.match(/^\/(en|es)/);
+    const currentLang = langMatch ? langMatch[1] : "en"; // fallback if not matched
+
+    // If the element doesn't exist on this route, navigate to the root with the correct lang
+    if (!el) {
+      navigate(`/${currentLang}`, { state: { scrollTo: sectionId } });
       return;
     }
 
-    if (el) {
-      window.history.pushState(null, "", `/#${sectionId}`);
-      el.scrollIntoView({ behavior: "smooth" });
+    // If the element exists, scroll smoothly to it
+    window.history.replaceState(null, "", `#${sectionId}`);
+    el.scrollIntoView({ behavior: "smooth" });
 
-      const index = navItems.findIndex(item => item.href === sectionHref);
-      setActiveIndex(index !== -1 ? index : null);
-    }
+    // Update active section index in context
+    const index = navItems.findIndex(item => item.href === sectionHref);
+    setActiveIndex(index !== -1 ? index : null);
   };
 
   return (

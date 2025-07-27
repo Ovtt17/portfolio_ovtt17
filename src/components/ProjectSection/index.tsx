@@ -1,4 +1,4 @@
-import ProjectsHeader from "./ProjectsHeader";
+import ProjectHeader from "./ProjectHeader";
 import ProjectList from "./ProjectList";
 import GitHubStats from "./GitHubStats";
 import ScrollIndicator from "../ScrollIndicator";
@@ -10,7 +10,7 @@ const ProjectSection = () => {
       className="bg-background-secondary min-h-screen pt-24 pb-28 px-4 relative"
     >
       <div className="container max-w-5xl">
-        <ProjectsHeader />
+        <ProjectHeader />
         <ProjectList />
         <GitHubStats />
       </div>

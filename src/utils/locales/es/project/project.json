@@ -1,0 +1,68 @@
+{
+  "header": {
+    "title1": "Proyectos",
+    "title2": "Destacados",
+    "description": "Una selección de proyectos enfocados en innovación, precisión y excelentes experiencias de usuario."
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Heycha Inventory",
+      "slug": "heycha-inventory",
+      "role": "Desarrollador Full Stack",
+      "description": "Sistema full-stack para gestión de inventario y ventas desarrollado para un negocio real. Incluye autenticación segura con OAuth2.0 y JWT, almacenamiento de archivos en AWS S3 y una arquitectura escalable con Spring Boot y React.",
+      "descriptionExtend": "Este proyecto está diseñado para gestionar inventario y ventas de un negocio real, ofreciendo una solución integral para el seguimiento de productos, ventas y niveles de inventario. Incluye autenticación segura con OAuth2.0 y JWT para un acceso protegido. También integra AWS S3 para almacenar imágenes de productos de forma eficiente. Desarrollado con arquitectura modular usando Spring Boot en el backend y React en el frontend, garantiza escalabilidad y fácil mantenimiento.",
+      "image": "/src/assets/images/projects/heycha-inventory/heycha-inventory.webp",
+      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "JWT", "OAuth2.0", "MySQL", "AWS S3", "Email Sending"]
+    },
+    {
+      "id": 2,
+      "title": "WhatsApp Clone",
+      "slug": "whatsapp-clone",
+      "role": "Desarrollador Full Stack",
+      "description": "Clon de WhatsApp Web con chat en tiempo real usando WebSockets, autenticación con Keycloak y backend escalable en Spring Boot.",
+      "descriptionExtend": "Este proyecto replica las funciones principales de WhatsApp Web, permitiendo enviar y recibir mensajes en tiempo real. La autenticación es gestionada por Keycloak, garantizando acceso seguro. El backend usa Spring Boot y WebSockets para la comunicación en tiempo real, asegurando entrega instantánea de mensajes. Su arquitectura escalable permite crecer sin perder rendimiento.",
+      "image": "/src/assets/images/projects/whatsapp-clone/whatsapp-clone.webp",
+      "videoDemo": "/src/assets/videos/projects/whatsapp-clone/whatsapp-clone.mp4",
+      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "Keycloak", "WebSocket", "Vite", "Docker Compose"],
+      "codeUrl": "https://github.com/Ovtt17/whatsapp-clone-api"
+    },
+    {
+      "id": 3,
+      "title": "Survey App",
+      "slug": "survey-app",
+      "role": "Desarrollador Full Stack",
+      "description": "Plataforma full-stack para encuestas con Spring Boot y React. Incluye autenticación con Google y Facebook (OAuth2.0), notificaciones por correo, carga de imágenes con Imgur API y módulos como reseñas, reportes y perfiles.",
+      "descriptionExtend": "Este proyecto ofrece una solución completa para crear y gestionar encuestas. Permite autenticación mediante Google y Facebook con OAuth2.0. Soporta notificaciones por email y carga de imágenes mediante Imgur API. Su arquitectura modular incluye servicios de reseñas, reportes y perfiles, siendo adaptable a múltiples escenarios. Backend con Spring Boot y frontend con React para una interfaz dinámica y responsiva.",
+      "image": "/src/assets/images/projects/survey-app/survey-app.webp",
+      "videoDemo": "/src/assets/videos/projects/survey-app/survey-app.mp4",
+      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "OAuth2.0", "JWT", "MySQL", "Imgur API", "REST API"],
+      "codeUrl": "https://github.com/Ovtt17/survey-app-api"
+    },
+    {
+      "id": 4,
+      "title": "API de E-commerce",
+      "slug": "ecommerce-api",
+      "role": "Desarrollador Backend",
+      "description": "Backend de microservicios para plataforma de e-commerce con Spring Boot, Spring Cloud, autenticación con Keycloak, Kafka y herramientas de observabilidad como Zipkin. Soporta bases de datos relacionales y NoSQL. Contenerizado con Docker Compose.",
+      "descriptionExtend": "Este proyecto implementa una arquitectura de microservicios para una plataforma de e-commerce, enfocándose en la escalabilidad y el mantenimiento. Utiliza Spring Boot para servicios individuales, Spring Cloud para descubrimiento y configuración, y Keycloak para autenticación. Incorpora Kafka para mensajería asíncrona y Zipkin para trazabilidad distribuida. Soporta PostgreSQL y MongoDB, brindando flexibilidad en el manejo de datos. Todo el sistema está contenerizado con Docker Compose para facilitar despliegue y escalabilidad.",
+      "image": "/src/assets/images/projects/ecommerce-architecture/ecommerce-architecture.webp",
+      "technologies": ["Micro Services", "Spring Boot", "Spring Cloud", "Java", "Docker Compose", "Keycloak", "Kafka", "MongoDB", "PostgreSQL", "Zipkin", "Zookeeper", "API Gateway", "Resource Server", "Email Sending"],
+      "codeUrl": "https://github.com/Ovtt17/ecommerce-app-api"
+    }
+  ],
+  "details": {
+    "description": "Descripción",
+    "videoDemo": "Demo en Video",
+    "technologies": "Tecnologías",
+    "viewCode": "Ver Código",
+    "viewCodeAreaLabel": "Ver Código en GitHub"
+  },
+  "github-calendar": {
+    "title": {
+      "part1": "Calendario de",
+      "part2": "GitHub"
+    },
+    "button": "Explorar Más en GitHub"
+  }
+}

@@ -3,6 +3,7 @@ import { navItems } from "../../constants/navItems";
 import { cn } from "../../lib/utils";
 import { motion } from 'framer-motion';
 import { useSectionContext } from "@/context/SectionContext";
+import { useTranslation } from "react-i18next";
 
 interface NavbarMobileProps {
   isOpen: boolean;
@@ -13,6 +14,7 @@ interface NavbarMobileProps {
 }
 
 const NavbarMobile: FC<NavbarMobileProps> = ({ isOpen, onClose, hoveredIndex, setHoveredIndex, activeIndex }) => {
+  const { t } = useTranslation("navbar");
   const { scrollToSection } = useSectionContext();
 
   const handleScroll = (href: string) => {
@@ -48,7 +50,7 @@ const NavbarMobile: FC<NavbarMobileProps> = ({ isOpen, onClose, hoveredIndex, se
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <span className="flex items-center justify-center">{item.icon}</span>
-                <span>{item.name}</span>
+                <span>{t(item.name)}</span>
               </button>
               {/* Animated underline: visible on hover or active */}
               <motion.div

@@ -1,0 +1,15 @@
+{
+  "header": {
+    "title1": "Contáctame"
+  },
+  "form": {
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "messagePlaceholder": "Deja tu mensaje aquí",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "successMessage": "¡Mensaje enviado con éxito!",
+    "errorMessage": "Error al enviar el mensaje. Por favor, inténtalo de nuevo."
+  }
+}

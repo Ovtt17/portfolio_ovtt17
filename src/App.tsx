@@ -1,31 +1,20 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom"
-import { SectionProvider } from "@/context/SectionContext"
-import Home from "@/pages/Home"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import NotFound from "@/pages/NotFound"
-import { useEffect } from "react"
-import ProjectDetail from "@/pages/ProjectDetail"
-
-function ScrollToTop() {
-  const { pathname } = useLocation()
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname])
-
-  return null
-}
+import LocalizedLayout from "@/layouts/LocalizedLayout"
 
 function App() {
   return (
     <BrowserRouter>
-      <SectionProvider>
-        <ScrollToTop />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/projects/:slug" element={<ProjectDetail />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </SectionProvider>
+      <Routes>
+        {/* Redirect / to /en by default */}
+        <Route path="/" element={<Navigate to="/en" replace />} />
+
+        {/* Routes with language prefix */}
+        <Route path="/:lang/*" element={<LocalizedLayout />} />
+
+        {/* Optional: fallback in case nothing matches */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </BrowserRouter>
   )
 }
