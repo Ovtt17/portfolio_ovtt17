@@ -1,0 +1,62 @@
+{
+  "header": {
+    "title1": "About",
+    "title2": "Me"
+  },
+  "intro": {
+    "title": {
+      "part1": "Back-End",
+      "part2": "Web Developer"
+    },
+    "description1": {
+      "part1": "I'm currently pursuing a degree in",
+      "highlight1": "Systems Engineering",
+      "part2": "which complements my work as a web developer with a strong focus on back-end development, primarily using",
+      "highlight2": "Java",
+      "part3": "and the",
+      "highlight3": "Spring Boot",
+      "part4": "ecosystem. I enjoy building scalable APIs, integrating authentication systems, and working on high-performance services."
+    },
+    "description2": {
+      "part1": "While my main strength lies in back-end engineering, I also have solid experience building modern user interfaces using",
+      "highlight1": "React",
+      "part2": "and",
+      "highlight2": "TypeScript",
+      "part3": "making me capable of delivering full-stack solutions when needed."
+    },
+    "cta": {
+      "downloadCV": "Download CV"
+    }
+  },
+  "cards": [
+    {
+      "title": "Full-Stack Development",
+      "description": {
+        "part1": "I build web applications using",
+        "highlight1": "Spring Boot",
+        "part2": "and",
+        "highlight2": "React",
+        "part3": "with",
+        "highlight3": "TypeScript",
+        "part4": "covering both back-end and front-end needs."
+      }
+    },
+    {
+      "title": "Back-End Specialist",
+      "description": {
+        "part1": "Focused on scalable APIs, clean architecture, and secure authentication using",
+        "highlight1": "Java",
+        "part2": "and",
+        "highlight2": "Spring Boot"
+      }
+    },
+    {
+      "title": "Continuous Growth",
+      "description": {
+        "part1": "Passionate about writing clean code, learning best practices, and staying up-to-date with the",
+        "highlight1": "Java",
+        "part2": "ecosystem."
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "header": {
+    "title1": "Sobre",
+    "title2": "Mí"
+  },
+  "intro": {
+    "title": {
+      "part1": "Desarrollador Web",
+      "part2": "Back-End"
+    },
+    "description1": {
+      "part1": "Actualmente estoy cursando una carrera en",
+      "highlight1": "Ingeniería de Sistemas",
+      "part2": "que complementa mi trabajo como desarrollador web con un fuerte enfoque en el desarrollo de back-end, utilizando principalmente",
+      "highlight2": "Java",
+      "part3": "y el ecosistema de",
+      "highlight3": "Spring Boot",
+      "part4": "Disfruto construir APIs escalables, integrar sistemas de autenticación y trabajar en servicios de alto rendimiento."
+    },
+    "description2": {
+      "part1": "Aunque mi principal fortaleza radica en la ingeniería de back-end, también tengo experiencia sólida construyendo interfaces de usuario modernas usando",
+      "highlight1": "React",
+      "part2": "y",
+      "highlight2": "TypeScript",
+      "part3": "lo que me hace capaz de ofrecer soluciones full-stack cuando es necesario."
+    },
+    "cta": {
+      "downloadCV": "Descargar CV"
+    }
+  },
+  "cards": [
+    {
+      "title": "Desarrollo Full-Stack",
+      "description": {
+        "part1": "Construyo aplicaciones web utilizando",
+        "highlight1": "Spring Boot",
+        "part2": "y",
+        "highlight2": "React",
+        "part3": "con",
+        "highlight3": "TypeScript",
+        "part4": "cubriendo tanto las necesidades de back-end como de front-end."
+      }
+    },
+    {
+      "title": "Especialista en Back-End",
+      "description": {
+        "part1": "Enfocado en APIs escalables, arquitectura limpia y autenticación segura utilizando",
+        "highlight1": "Java",
+        "part2": "y",
+        "highlight2": "Spring Boot"
+      }
+    },
+    {
+      "title": "Crecimiento Continuo",
+      "description": {
+        "part1": "Apasionado por escribir código limpio, aprender mejores prácticas y mantenerse actualizado con el ecosistema de",
+        "highlight1": "Java",
+        "part2": "Java."
+      }
+    }
+  ]
+}
