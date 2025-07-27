@@ -65,7 +65,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
 
         {/* Content */}
         <div className="px-6 py-4 flex-grow">
-          <h3 className="text-xl font-semibold mb-1 text-primary">{project.title}</h3>
+          <h3 className="mb-1 text-xl font-extrabold uppercase gradient-text">{project.title}</h3>
           <p className="text-muted-foreground text-sm mb-4">{project.description}</p>
 
           {/* Technologies */}

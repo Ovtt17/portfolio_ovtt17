@@ -2,10 +2,12 @@ import { useForm, ValidationError } from '@formspree/react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useRef } from 'react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm('xrblpdbw');
   const formRef = useRef<HTMLFormElement>(null);
+  const { t } = useTranslation('contact');
 
   const validateFields = (form: HTMLFormElement) => {
     const name = (form.elements.namedItem('name') as HTMLInputElement)?.value.trim();
@@ -34,9 +36,9 @@ const ContactForm = () => {
 
     const promise = handleSubmit(e);
     toast.promise(promise, {
-      loading: 'Sending...',
-      success: 'Message sent successfully!',
-      error: 'Something went wrong. Please try again.',
+      loading: t('form.submitting'),
+      success: t('form.successMessage'),
+      error: t('form.errorMessage'),
     });
 
     promise.then(() => {
@@ -52,9 +54,7 @@ const ContactForm = () => {
         onSubmit={onSubmit}
         className="flex flex-col gap-6 max-w-xl w-full mx-auto items-start text-left"
       >
-        <label htmlFor="name" className="text-white text-sm font-medium">
-          Name
-        </label>
+        <label htmlFor="name" className="text-white text-sm font-medium">{t('form.name')}</label>
         <input
           id="name"
           type="text"
@@ -63,9 +63,7 @@ const ContactForm = () => {
           required
           className="w-full border-b border-white/20 bg-transparent text-white placeholder-white/60 py-3 px-1 focus:outline-none focus:border-primary focus:ring-0 transition-all"
         />
-        <label htmlFor="email" className="text-white text-sm font-medium">
-          Email
-        </label>
+        <label htmlFor="email" className="text-white text-sm font-medium">{t('form.email')}</label>
         <input
           id="email"
           type="email"
@@ -80,13 +78,11 @@ const ContactForm = () => {
           errors={state.errors}
           className="text-red-400 text-sm mt-1"
         />
-        <label htmlFor="message" className="text-white text-sm font-medium">
-          Message
-        </label>
+        <label htmlFor="message" className="text-white text-sm font-medium">{t('form.message')}</label>
         <textarea
           id="message"
           name="message"
-          placeholder="Leave your message here"
+          placeholder={t('form.messagePlaceholder')}
           rows={4}
           required
           className="w-full border border-white/20 bg-transparent text-white placeholder-white/60 py-3 px-2 resize-none focus:outline-none focus:border-primary focus:ring-0 transition-all"
@@ -106,7 +102,7 @@ const ContactForm = () => {
             state.submitting && "cursor-not-allowed"
           )}
         >
-          {state.submitting ? 'Sending...' : 'Send'}
+          {state.submitting ? t('form.submitting') : t('form.submit')}
         </button>
       </form>
     </>
