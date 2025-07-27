@@ -1,0 +1,11 @@
+{
+  "greeting": "Hola, soy",
+  "role": {
+    "part1": "Desarrollador",
+    "part2": "Back-End"
+  },
+  "description": "Soy un ingeniero de software especializado en ",
+  "descriptionSuffix": ", creando soluciones escalables y modernas.",
+  "getInTouch": "Contáctame",
+  "downloadCV": "Descargar CV"
+}

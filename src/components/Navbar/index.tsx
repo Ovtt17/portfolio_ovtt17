@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="fixed top-4 left-0 z-40 w-full px-2">
       {/* Desktop Navbar */}
       <div className="hidden lg:flex justify-center">
-        <div className="relative max-w-6xl w-full px-6 py-2 bg-background/40 backdrop-blur-md shadow-lg rounded-lg flex justify-center items-center">
+        <div className="max-w-6xl px-6 py-2 bg-background/40 backdrop-blur-md shadow-lg rounded-lg flex justify-between items-center">
           <NavbarDesktop
             hoveredIndex={hoveredIndex}
             setHoveredIndex={setHoveredIndex}

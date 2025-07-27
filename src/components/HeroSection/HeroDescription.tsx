@@ -1,7 +1,17 @@
-const HeroDescription = () => (
-  <p className="text-base md:text-lg text-muted-foreground max-w-2xl opacity-0 animate-fade-in-delay-3">
-    I'm a software engineer specializing in <span className="text-primary">Java</span>, <span className="text-primary">Spring Boot</span>, and <span className="text-primary">React</span>, building scalable and modern solutions.
-  </p>
-);
+import { useTranslation } from "react-i18next";
+
+const HeroDescription = () => {
+  const { t } = useTranslation("hero");
+
+  return (
+    <p className="text-base md:text-lg text-muted-foreground max-w-2xl opacity-0 animate-fade-in-delay-3">
+      {t("description")}
+      <span className="text-primary">Java</span>,
+      <span className="text-primary"> Spring Boot</span>,
+      <span className="text-primary"> React</span>
+      {t("descriptionSuffix")}
+    </p>
+  );
+};
 
 export default HeroDescription;
