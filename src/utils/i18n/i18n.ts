@@ -11,6 +11,8 @@ import enExperience from "@/utils/locales/en/experience/experience.json";
 import esExperience from "@/utils/locales/es/experience/experience.json";
 import enProject from "@/utils/locales/en/project/project.json";
 import esProject from "@/utils/locales/es/project/project.json";
+import enTechnologies from "@/utils/locales/en/technologies/technologies.json";
+import esTechnologies from "@/utils/locales/es/technologies/technologies.json";
 
 
 const pathLangMatch = window.location.pathname.match(/^\/(en|es)(\/|$)/);
@@ -28,6 +30,7 @@ i18n
         about: enAbout,
         experience: enExperience,
         project: enProject,
+        technologies: enTechnologies,
       },
       es: {
         navbar: esNavbar,
@@ -35,6 +38,7 @@ i18n
         about: esAbout,
         experience: esExperience,
         project: esProject,
+        technologies: esTechnologies,
       },
     },
     lng: savedLanguage, // Usa el idioma de la URL, localStorage o "en" por defecto

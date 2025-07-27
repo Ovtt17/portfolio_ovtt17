@@ -1,0 +1,7 @@
+{
+  "title": "Tecnologías",
+  "intro": {
+    "part1": "Estoy especializado en desarrollo back-end con Java y Spring Boot, construyendo APIs seguras con herramientas como JWT, Spring Security, Keycloak y OAuth 2.0. Utilizo MySQL y PostgreSQL para el almacenamiento de datos, y despliego aplicaciones completas con Docker y AWS S3.",
+    "part2": "También tengo experiencia con React, TypeScript, Tailwind CSS y GitHub. Aunque me enfoco en el back-end, puedo entregar soluciones full-stack y gestionar máquinas virtuales basadas en Linux para despliegue y pruebas."
+  }
+}
