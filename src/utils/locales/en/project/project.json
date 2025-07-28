@@ -17,6 +17,17 @@
     },
     {
       "id": 2,
+      "title": "Ecommerce API",
+      "slug": "ecommerce-api",
+      "role": "Back End Developer",
+      "description": "Microservices backend for an e-commerce platform with Spring Boot, Spring Cloud, Keycloak authentication, Kafka, and observability tools like Zipkin. Supports relational and NoSQL databases, containerized with Docker Compose.",
+      "descriptionExtend": "This project implements a microservices architecture for an e-commerce platform, focusing on scalability and maintainability. It utilizes Spring Boot for building individual services, Spring Cloud for service discovery and configuration management, and Keycloak for secure user authentication. The system incorporates Kafka for asynchronous messaging between services, enhancing performance and reliability. Observability is achieved through tools like Zipkin for distributed tracing. The architecture supports both relational databases (PostgreSQL) and NoSQL databases (MongoDB), providing flexibility in data management. The entire system is containerized using Docker Compose, facilitating easy deployment and scaling.",
+      "image": "/src/assets/images/projects/ecommerce-architecture/ecommerce-architecture.webp",
+      "technologies": ["Micro Services", "Spring Boot", "Spring Cloud", "Java", "Docker Compose", "Keycloak", "Kafka", "MongoDB", "PostgreSQL", "Zipkin", "Zookeeper", "API Gateway", "Resource Server", "Email Sending"],
+      "codeUrl": "https://github.com/Ovtt17/ecommerce-app-api"
+    },
+    {
+      "id": 3,
       "title": "WhatsApp Clone",
       "slug": "whatsapp-clone",
       "role": "Full Stack Developer",
@@ -28,7 +39,7 @@
       "codeUrl": "https://github.com/Ovtt17/whatsapp-clone-api"
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Survey App",
       "slug": "survey-app",
       "role": "Full Stack Developer",
@@ -38,17 +49,6 @@
       "videoDemo": "/src/assets/videos/projects/survey-app/survey-app.mp4",
       "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "OAuth2.0", "JWT", "MySQL", "Imgur API", "REST API"],
       "codeUrl": "https://github.com/Ovtt17/survey-app-api"
-    },
-    {
-      "id": 4,
-      "title": "Ecommerce API",
-      "slug": "ecommerce-api",
-      "role": "Back End Developer",
-      "description": "Microservices backend for an e-commerce platform with Spring Boot, Spring Cloud, Keycloak authentication, Kafka, and observability tools like Zipkin. Supports relational and NoSQL databases, containerized with Docker Compose.",
-      "descriptionExtend": "This project implements a microservices architecture for an e-commerce platform, focusing on scalability and maintainability. It utilizes Spring Boot for building individual services, Spring Cloud for service discovery and configuration management, and Keycloak for secure user authentication. The system incorporates Kafka for asynchronous messaging between services, enhancing performance and reliability. Observability is achieved through tools like Zipkin for distributed tracing. The architecture supports both relational databases (PostgreSQL) and NoSQL databases (MongoDB), providing flexibility in data management. The entire system is containerized using Docker Compose, facilitating easy deployment and scaling.",
-      "image": "/src/assets/images/projects/ecommerce-architecture/ecommerce-architecture.webp",
-      "technologies": ["Micro Services", "Spring Boot", "Spring Cloud", "Java", "Docker Compose", "Keycloak", "Kafka", "MongoDB", "PostgreSQL", "Zipkin", "Zookeeper", "API Gateway", "Resource Server", "Email Sending"],
-      "codeUrl": "https://github.com/Ovtt17/ecommerce-app-api"
     }
   ],
   "details": {
