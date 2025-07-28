@@ -6,8 +6,8 @@ const useDownloadCV = () => {
   const getCVLink = () => {
     const language = i18n.language;
     const cvMap: Record<string, string> = {
-      en: "/src/assets/pdf/OvettMora_CV_English_2025.pdf",
-      es: "/src/assets/pdf/OvettMora_CV_Español_2025.pdf",
+      en: "/pdf/OvettMora_CV_English_2025.pdf",
+      es: "/pdf/OvettMora_CV_Español_2025.pdf",
     };
 
     return cvMap[language] || cvMap.en;

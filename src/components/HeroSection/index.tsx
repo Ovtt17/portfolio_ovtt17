@@ -5,7 +5,7 @@ import HeroHeader from "./HeroHeader";
 import HeroDescription from "./HeroDescription";
 import HeroButtons from "./HeroButtons";
 import ScrollIndicator from "../ScrollIndicator";
-import profileImg from "@/assets/images/about-me/profile-img.jpg";
+import profileImg from "/images/about-me/profile-img.webp";
 
 const HeroSection = () => {
   const sectionRef = useRef(null);
@@ -31,11 +31,17 @@ const HeroSection = () => {
         className="container max-w-5xl mx-auto text-left z-10 space-y-4"
       >
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
-          <img
-            src={profileImg}
-            alt="Profile"
-            className="w-32 h-32 md:w-60 md:h-60 object-contain rounded-full border-4 border-primary shadow-md shrink-0"
-          />
+          <picture>
+            <source srcSet={profileImg} type="image/webp" />
+            <img
+              src={profileImg}
+              alt="Profile"
+              width="128"
+              height="128"
+              loading="lazy"
+              className="w-32 h-32 md:w-60 md:h-60 object-contain rounded-full border-4 border-primary shadow-md shrink-0"
+            />
+          </picture>
           <div>
             <HeroHeader />
             <HeroDescription />

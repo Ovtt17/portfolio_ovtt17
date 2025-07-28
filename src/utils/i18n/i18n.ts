@@ -17,7 +17,7 @@ import enContact from "@/utils/locales/en/contact/contact.json";
 import esContact from "@/utils/locales/es/contact/contact.json";
 
 
-const pathLangMatch = window.location.pathname.match(/^\/(en|es)(\/|$)/);
+const pathLangMatch = window.location.pathname.match(/^\/(en|es)(\/?$)/);
 const detectedLanguage = pathLangMatch ? pathLangMatch[1] : "en";
 
 const savedLanguage = localStorage.getItem("language") || detectedLanguage;

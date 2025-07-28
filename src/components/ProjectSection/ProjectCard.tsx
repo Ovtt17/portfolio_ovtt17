@@ -53,13 +53,17 @@ const ProjectCard: FC<Props> = ({ project }) => {
               e.stopPropagation();
               handleOpen();
             }}
-            className="relative w-full h-0 pb-[56.25%] overflow-hidden"
+            className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-lg"
           >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+            <picture>
+              <source srcSet={project.image} type="image/webp" />
+              <img
+                src={project.image}
+                alt={`Image preview of ${project.title}`}
+                loading="lazy"
+                className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 rounded-lg"
+              />
+            </picture>
           </div>
         </div>
 
@@ -89,6 +93,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors duration-300"
+              aria-label={`View demo for ${project.title}`}
             >
               <ExternalLink className="w-10 h-10" />
             </a>
@@ -99,6 +104,7 @@ const ProjectCard: FC<Props> = ({ project }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground hover:text-primary transition-colors duration-300"
+              aria-label={`View code for ${project.title}`}
             >
               <GitHubIcon className="w-10 h-10" />
             </a>

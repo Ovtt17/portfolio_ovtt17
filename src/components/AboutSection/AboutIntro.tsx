@@ -21,7 +21,10 @@ const AboutIntro = () => {
       </p>
 
       <div className="flex flex-row gap-4 pt-4 justify-center">
-        <button onClick={openCVInNewTab} className="cosmic-button cursor-pointer">
+        <button
+          onClick={openCVInNewTab}
+          className="cosmic-button cursor-pointer"
+        >
           {t("intro.cta.downloadCV")}
         </button>
       </div>

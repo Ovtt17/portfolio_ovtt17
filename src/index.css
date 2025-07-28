@@ -85,8 +85,7 @@
     --card: 222 47% 8%;
 
     --primary: 250 65% 65%;
-    --primary-foreground: 213 31% 91%;
-
+    --primary-foreground: 0 0% 100%; /* blanco */
     --secondary: 200 50% 50%;
     --secondary-foreground: 0 0% 100%;
 
@@ -194,8 +193,10 @@
 }
 
 @utility cosmic-button {
-  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
-         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+  @apply px-6 py-2 rounded-full text-white text-sm sm:text-base font-medium
+         bg-gradient-to-br from-pink-500 via-purple-800 to-blue-600
+         transition-all duration-300
+         hover:shadow-[0_0_12px_rgba(126,34,206,0.6)]
          hover:scale-105 active:scale-95;
 }
 
@@ -292,11 +293,20 @@ time {
   }
 }
 
+/* Responsive adjustments for .experience-description */
+@media (width <= 768px) {
+  .experience-description {
+    font-size: 0.95rem;
+    padding-bottom: 12px;
+    padding-left: 0.75rem;
+  }
+}
+
 @media (width <= 480px) {
   .experience-description {
-    font-size: 0.95rem; /* Even smaller font for very small screens */
-    padding-bottom: 10px;
-    padding-left: 0.75rem;
+    font-size: 0.85rem;
+    padding-bottom: 8px;
+    padding-left: 0.5rem;
   }
 }
 
