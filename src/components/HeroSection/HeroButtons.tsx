@@ -1,9 +1,12 @@
 import { GitHubIcon } from "@/assets/Icon/GitHubIcon";
 import { LinkedInIcon } from "@/assets/Icon/LinkedInIcon";
+import useDownloadCV from "@/hooks/useDownloadCV";
+import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 
 const HeroButtons = () => {
   const { t } = useTranslation("hero");
+  const { openCVInNewTab } = useDownloadCV();
 
   return (
     <div className="pt-1 flex items-center opacity-0 animate-fade-in-delay-4">
@@ -16,12 +19,18 @@ const HeroButtons = () => {
             {t("getInTouch")}
           </a>
 
-          <a
-            href="#hero"
-            className="px-4 py-2 text-sm sm:text-base text-center rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 cursor-not-allowed"
+          <button
+            onClick={openCVInNewTab}
+            className={cn(
+              "px-4 py-2 cursor-pointer",
+              "text-sm sm:text-base",
+              "text-center rounded-full",
+              "border border-primary text-primary",
+              "hover:bg-primary/10 transition-colors duration-300"
+            )}
           >
             {t("downloadCV")}
-          </a>
+          </button>
         </div>
         <div className="flex gap-4">
           <a

@@ -1,7 +1,9 @@
+import useDownloadCV from "@/hooks/useDownloadCV";
 import { useTranslation } from "react-i18next";
 
 const AboutIntro = () => {
   const { t } = useTranslation("about");
+  const { openCVInNewTab } = useDownloadCV();
 
   return (
     <div className="space-y-6">
@@ -19,9 +21,9 @@ const AboutIntro = () => {
       </p>
 
       <div className="flex flex-row gap-4 pt-4 justify-center">
-        <a href="#about" className="cosmic-button cursor-not-allowed">
+        <button onClick={openCVInNewTab} className="cosmic-button cursor-pointer">
           {t("intro.cta.downloadCV")}
-        </a>
+        </button>
       </div>
     </div>
   );
