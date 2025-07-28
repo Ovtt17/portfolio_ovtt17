@@ -48,7 +48,7 @@ const ProjectDetail: FC = () => {
           <div>
             <h1
               id="title"
-              className="block text-3xl md:text-4xl font-extrabold uppercase gradient-text border-r-2 border-white typing-animation"
+              className="inline-block text-3xl md:text-4xl font-extrabold uppercase gradient-text border-r-2 border-white typing-animation"
             >
               {title}
             </h1>
