@@ -1,15 +1,11 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "filesystem",
-          "negate": true,
-          "pattern": "/:path*"
-        }
-      ],
-      "destination": "/index.html"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
     }
   ]
 }
