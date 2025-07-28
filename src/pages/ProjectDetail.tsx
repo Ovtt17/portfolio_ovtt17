@@ -58,11 +58,15 @@ const ProjectDetail: FC = () => {
           {/* Image */}
           {image && (
             <figure className="w-full aspect-[16/9] rounded-lg overflow-hidden shadow-lg">
-              <img
-                src={image}
-                alt={`${title} cover`}
-                className="w-full h-full object-contain rounded-lg"
-              />
+              <picture>
+                <source srcSet={image} type="image/webp" />
+                <img
+                  src={image}
+                  alt={`${title} cover image`}
+                  loading="lazy"
+                  className="w-full h-full object-contain rounded-lg transition-transform duration-300 hover:scale-105"
+                />
+              </picture>
             </figure>
           )}
 
