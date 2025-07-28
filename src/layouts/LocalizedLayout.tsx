@@ -21,18 +21,18 @@ export default function LocalizedLayout() {
     }
   }, [lang, i18n]);
 
-  // If lang is invalid, redirect or show NotFound
-  const supportedLangs = ["en", "es"];
-  if (!supportedLangs.includes(lang || "")) {
-    return <NotFound />;
-  }
+  const isLangInvalid = (lang: string | undefined) => {
+    const supportedLangs = ["en", "es"];
+    return !supportedLangs.includes(lang || "");
+  };
 
   function ScrollToTop() {
     const { pathname } = useLocation();
 
     useEffect(() => {
-      // Only scroll to top if there is no hash
-      if (!window.location.hash) {
+      // Scroll to top only if the route is not /en or /es
+      const supportedLangsRoutes = ["/en", "/es"];
+      if (!supportedLangsRoutes.includes(pathname)) {
         window.scrollTo(0, 0);
       }
     }, [pathname]);
@@ -40,6 +40,10 @@ export default function LocalizedLayout() {
     return null;
   }
 
+  if (isLangInvalid(lang)) {
+    window.scrollTo(0, 0);
+    return <NotFound />;
+  }
 
   return (
     <SectionProvider>
