@@ -35,20 +35,20 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
       {/* Header */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-3">
         <div>
-          <h3 className="text-white text-xl text-left font-semibold tracking-wide leading-snug">
+          <h3 className="text-white text-lg sm:text-xl text-left font-semibold tracking-wide leading-snug">
             {title}
           </h3>
-          <h4 className="text-white/80 text-lg text-left tracking-wide leading-snug">
+          <h4 className="text-white/80 text-base sm:text-lg text-left tracking-wide leading-snug">
             {position}
           </h4>
         </div>
-        <time className="text-sm text-gray-500 font-mono mt-1 sm:mt-0">
+        <time className="text-xs sm:text-sm text-gray-500 font-mono mt-1 sm:mt-0">
           {endDate ? `${startDate} - ${endDate}` : startDate}
         </time>
       </div>
 
       {/* Description */}
-      <ul className="list-disc list-outside experience-description">
+      <ul className="list-disc list-outside experience-description text-sm sm:text-base">
         {description.map((item, i) => (
           <li key={i}>{item}</li>
         ))}
@@ -60,7 +60,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-pink-400 hover:text-cyan-400 transition-colors text-sm font-medium underline underline-offset-4"
+          className="text-pink-400 hover:text-cyan-400 transition-colors text-xs sm:text-sm font-medium underline underline-offset-4"
         >
           Visit site
         </a>
