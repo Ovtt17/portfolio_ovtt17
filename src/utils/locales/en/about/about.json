@@ -39,9 +39,7 @@
     },
     {
       "title": "Continuous Growth",
-      "description": {
-        "part1": "Passionate about writing clean code, learning best practices, and staying up-to-date with the Java ecosystem."
-      }
+      "description": "Passionate about writing clean code, learning best practices, and staying up-to-date with the Java ecosystem."
     }
   ]
 }
