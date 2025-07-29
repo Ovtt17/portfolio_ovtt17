@@ -30,7 +30,7 @@ const HeroSection = () => {
         style={{ opacity, y, scale }}
         className="container max-w-5xl mx-auto text-left z-10 space-y-4"
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-8">
           <picture>
             <source srcSet={profileImg} type="image/webp" />
             <img
@@ -39,7 +39,7 @@ const HeroSection = () => {
               width="128"
               height="128"
               loading="lazy"
-              className="w-32 h-32 md:w-60 md:h-60 object-contain rounded-full border-4 border-primary shadow-md shrink-0"
+              className="w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 object-cover rounded-full border-4 border-primary shadow-md shrink-0"
             />
           </picture>
           <div>
