@@ -147,9 +147,10 @@
 
 @utility container {
   margin-inline: auto;
-  padding-inline: 2rem;
+  padding-inline: 1rem; /* Default padding for smaller screens */
 
   @media (width >= 640px) {
+    padding-inline: 2rem; /* Increased padding for larger screens */
     max-width: 640px;
   }
   @media (width >= 768px) {

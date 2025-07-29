@@ -12,7 +12,7 @@ const ExperienceSection: FC = () => {
     <motion.section
       id="experience"
       ref={sectionRef}
-      className="bg-background-secondary min-h-screen pt-24 pb-25 px-1 relative"
+      className="bg-background-secondary min-h-screen pt-24 pb-25 relative"
     >
       <motion.div
         style={{ opacity, y }}
