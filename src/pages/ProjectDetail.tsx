@@ -48,7 +48,7 @@ const ProjectDetail: FC = () => {
           <div>
             <h1
               id="title"
-              className="inline-block text-3xl md:text-4xl font-extrabold uppercase gradient-text border-r-2 border-white typing-animation"
+              className="text-2xl sm:text-3xl md:text-4xl font-extrabold break-words uppercase gradient-text max-w-full"
             >
               {title}
             </h1>
@@ -76,7 +76,7 @@ const ProjectDetail: FC = () => {
             {descriptionExtend && (
               <div>
                 <h2
-                  className="inline-block text-2xl md:text-3xl font-bold capitalize gradient-text whitespace-nowrap overflow-hidden mb-4"
+                  className="text-2xl md:text-3xl font-bold capitalize gradient-text mb-4"
                 >
                   {t("details.description")}
                 </h2>
@@ -87,7 +87,7 @@ const ProjectDetail: FC = () => {
             {videoDemo && (
               <div>
                 <h2
-                  className="inline-block text-2xl md:text-3xl font-bold capitalize gradient-text whitespace-nowrap overflow-hidden mb-4"
+                  className="text-2xl md:text-3xl font-bold capitalize gradient-text mb-4"
                 >
                   {t("details.videoDemo")}
                 </h2>
@@ -102,9 +102,9 @@ const ProjectDetail: FC = () => {
 
             {/* Technologies */}
             {technologies.length > 0 && (
-              <div className="flex flex-col gap-8 px-2">
+              <div className="flex flex-col gap-8">
                 <h2
-                  className="inline-block text-2xl md:text-3xl font-bold capitalize gradient-text whitespace-nowrap overflow-hidden mb-4"
+                  className="text-2xl md:text-3xl font-bold capitalize gradient-text mb-4"
                 >
                   {t("details.technologies")}
                 </h2>

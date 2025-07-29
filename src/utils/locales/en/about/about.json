@@ -31,31 +31,16 @@
   "cards": [
     {
       "title": "Full-Stack Development",
-      "description": {
-        "part1": "I build web applications using",
-        "highlight1": "Spring Boot",
-        "part2": "and",
-        "highlight2": "React",
-        "part3": "with",
-        "highlight3": "TypeScript",
-        "part4": "covering both back-end and front-end needs."
-      }
+      "description": "I build web applications using Spring Boot and React with TypeScript, covering both back-end and front-end needs."
     },
     {
       "title": "Back-End Specialist",
-      "description": {
-        "part1": "Focused on scalable APIs, clean architecture, and secure authentication using",
-        "highlight1": "Java",
-        "part2": "and",
-        "highlight2": "Spring Boot"
-      }
+      "description": "Focused on scalable APIs, clean architecture, and secure authentication using Java and Spring Boot."
     },
     {
       "title": "Continuous Growth",
       "description": {
-        "part1": "Passionate about writing clean code, learning best practices, and staying up-to-date with the",
-        "highlight1": "Java",
-        "part2": "ecosystem."
+        "part1": "Passionate about writing clean code, learning best practices, and staying up-to-date with the Java ecosystem."
       }
     }
   ]

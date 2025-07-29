@@ -7,7 +7,7 @@
   "projects": [
     {
       "id": 1,
-      "title": "Heycha Inventory",
+      "title": "Heycha Inventory System",
       "slug": "heycha-inventory",
       "role": "Full Stack Developer",
       "description": "Full-stack inventory and sales management system built for a real business. Features secure authentication with OAuth2.0 and JWT, AWS S3 file storage, and a scalable architecture using Spring Boot and React.",
@@ -47,7 +47,7 @@
       "descriptionExtend": "This project provides a comprehensive solution for creating and managing surveys. It allows users to authenticate using OAuth2.0 with Google and Facebook, ensuring secure access. The application supports email notifications for survey updates and uses the Imgur API for image uploads, enhancing user experience. The architecture is modular, featuring services for reviews, reports, and user profiles, making it adaptable for various use cases. The backend is built with Spring Boot, providing a robust REST API, while the frontend is developed with React, ensuring a responsive and dynamic user interface.",
       "image": "/images/projects/survey-app/survey-app.webp",
       "videoDemo": "/videos/projects/survey-app/survey-app.mp4",
-      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "OAuth2.0", "JWT", "MySQL", "Imgur API", "REST API"],
+      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "OAuth2.0", "JWT", "MySQL", "Imgur API"],
       "codeUrl": "https://github.com/Ovtt17/survey-app-api"
     }
   ],
