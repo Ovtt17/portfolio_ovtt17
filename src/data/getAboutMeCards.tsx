@@ -10,13 +10,7 @@ export const getAboutMeCards = (t: TFunction): AboutCardProps[] => [
     title: t("cards.0.title"),
     description: (
       <>
-        {t("cards.0.description.part1")}{" "}
-        <span className="text-primary">{t("cards.0.description.highlight1")}</span>{" "}
-        {t("cards.0.description.part2")}{" "}
-        <span className="text-primary">{t("cards.0.description.highlight2")}</span>{" "}
-        {t("cards.0.description.part3")}{" "}
-        <span className="text-primary">{t("cards.0.description.highlight3")}</span>{" "}
-        {t("cards.0.description.part4")}
+        {t("cards.0.description")}
       </>
     ),
   },
@@ -25,10 +19,7 @@ export const getAboutMeCards = (t: TFunction): AboutCardProps[] => [
     title: t("cards.1.title"),
     description: (
       <>
-        {t("cards.1.description.part1")}{" "}
-        <span className="text-primary">{t("cards.1.description.highlight1")}</span>{" "}
-        {t("cards.1.description.part2")}{" "}
-        <span className="text-primary">{t("cards.1.description.highlight2")}</span>
+        {t("cards.1.description")}
       </>
     ),
   },
@@ -37,9 +28,7 @@ export const getAboutMeCards = (t: TFunction): AboutCardProps[] => [
     title: t("cards.2.title"),
     description: (
       <>
-        {t("cards.2.description.part1")}{" "}
-        <span className="text-primary">{t("cards.2.description.highlight1")}</span>{" "}
-        {t("cards.2.description.part2")}
+        {t("cards.2.description")}
       </>
     ),
   },
