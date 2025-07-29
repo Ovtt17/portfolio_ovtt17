@@ -7,13 +7,13 @@
   "projects": [
     {
       "id": 1,
-      "title": "Heycha Inventory",
+      "title": "Sistema de Inventario Heycha",
       "slug": "heycha-inventory",
       "role": "Desarrollador Full Stack",
       "description": "Sistema full-stack para gestión de inventario y ventas desarrollado para un negocio real. Incluye autenticación segura con OAuth2.0 y JWT, almacenamiento de archivos en AWS S3 y una arquitectura escalable con Spring Boot y React.",
       "descriptionExtend": "Este proyecto está diseñado para gestionar inventario y ventas de un negocio real, ofreciendo una solución integral para el seguimiento de productos, ventas y niveles de inventario. Incluye autenticación segura con OAuth2.0 y JWT para un acceso protegido. También integra AWS S3 para almacenar imágenes de productos de forma eficiente. Desarrollado con arquitectura modular usando Spring Boot en el backend y React en el frontend, garantiza escalabilidad y fácil mantenimiento.",
       "image": "/images/projects/heycha-inventory/heycha-inventory.webp",
-      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "JWT", "OAuth2.0", "MySQL", "AWS S3", "Email Sending"]
+      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "JWT", "OAuth2.0", "MySQL", "AWS S3", "Envío de Email"]
     },
     {
       "id": 2,
@@ -37,13 +37,13 @@
         "Zookeeper",
         "API Gateway",
         "Resource Server",
-        "Email Sending"
+        "Envío de Email"
       ],
       "codeUrl": "https://github.com/Ovtt17/ecommerce-app-api"
     },
     {
       "id": 3,
-      "title": "WhatsApp Clone",
+      "title": "Clon de WhatsApp",
       "slug": "whatsapp-clone",
       "role": "Desarrollador Full Stack",
       "description": "Clon de WhatsApp Web con chat en tiempo real usando WebSockets, autenticación con Keycloak y backend escalable en Spring Boot.",
@@ -55,14 +55,14 @@
     },
     {
       "id": 4,
-      "title": "Survey App",
+      "title": "App de Encuestas",
       "slug": "survey-app",
       "role": "Desarrollador Full Stack",
       "description": "Plataforma full-stack para encuestas con Spring Boot y React. Incluye autenticación con Google y Facebook (OAuth2.0), notificaciones por correo, carga de imágenes con Imgur API y módulos como reseñas, reportes y perfiles.",
       "descriptionExtend": "Este proyecto ofrece una solución completa para crear y gestionar encuestas. Permite autenticación mediante Google y Facebook con OAuth2.0. Soporta notificaciones por email y carga de imágenes mediante Imgur API. Su arquitectura modular incluye servicios de reseñas, reportes y perfiles, siendo adaptable a múltiples escenarios. Backend con Spring Boot y frontend con React para una interfaz dinámica y responsiva.",
       "image": "/images/projects/survey-app/survey-app.webp",
       "videoDemo": "/videos/projects/survey-app/survey-app.mp4",
-      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "OAuth2.0", "JWT", "MySQL", "Imgur API", "REST API"],
+      "technologies": ["Spring Boot", "Java", "React", "TypeScript", "Tailwind", "OAuth2.0", "JWT", "MySQL", "Imgur API"],
       "codeUrl": "https://github.com/Ovtt17/survey-app-api"
     }
   ],
