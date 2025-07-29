@@ -11,13 +11,13 @@
       "startDate": "Diciembre 2024",
       "endDate": "Presente",
       "description": [
-        "Desarrollé un sistema interno seguro para gestionar inventarios, ventas, pedidos y envíos en una tienda minorista, optimizando la eficiencia operativa.",
-        "Construí una API backend utilizando Spring Boot (Java 17) y un frontend moderno con React, TypeScript y Tailwind CSS.",
+        "Desarrollé un sistema interno seguro para gestionar inventarios, ventas, pedidos y envíos en una tienda de indumentaria, optimizando la eficiencia operativa.",
+        "Construí una API backend utilizando Spring Boot (Java 17) y el frontend con React, TypeScript y Tailwind CSS.",
         "Implementé autenticación y autorización con JWT y OAuth 2.0, incluyendo integración de inicio de sesión con Google.",
         "Añadí funcionalidades avanzadas de filtrado de productos para mejorar la experiencia de búsqueda.",
-        "Desplegué el backend en Railway con MySQL para la persistencia de datos y utilicé AWS S3 para el almacenamiento seguro de activos.",
-        "Proporcioné mantenimiento continuo y actualizaciones para adaptarme a las necesidades del cliente, asegurando escalabilidad y rendimiento.",
-        "Administré envíos y gestioné transacciones en dos tipos de monedas para facilitar las operaciones con dólares y córdobas."
+        "Utilicé AWS S3 para el almacenamiento seguro de activos.",
+        "Administré envíos y gestioné transacciones en dos tipos de monedas para facilitar las operaciones con dólares y córdobas.",
+        "Proporcioné mantenimiento continuo y actualizaciones para adaptarme a las necesidades del cliente, asegurando escalabilidad y rendimiento."
       ]
     }
   ]

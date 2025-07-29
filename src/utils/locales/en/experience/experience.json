@@ -15,9 +15,9 @@
         "Built a modern backend API using Spring Boot (Java 17) and a responsive frontend with React, TypeScript, and Tailwind CSS.",
         "Implemented authentication and authorization with JWT and OAuth 2.0, including Google login integration.",
         "Added advanced product filtering features to enhance search functionality and user experience.",
-        "Deployed backend services on Railway with MySQL for data persistence and utilized AWS S3 for secure asset storage.",
-        "Provided continuous maintenance and updates to meet client needs, ensuring scalability and performance.",
-        "Managed shipments and handled transactions in two types of currencies to facilitate operations with dollars and cordobas."
+        "Utilized AWS S3 for secure asset storage.",
+        "Managed shipments and handled transactions in two types of currencies to facilitate operations with dollars and cordobas.",
+        "Provided continuous maintenance and updates to meet client needs, ensuring scalability and performance."
       ]
     }
   ]
